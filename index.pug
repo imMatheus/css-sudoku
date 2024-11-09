@@ -8,11 +8,19 @@ html(lang="en")
   body
     .board
       each squareIndex in [1, 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-        label.square(for=`square-${squareIndex}`)
+        each num in [1, 2, 3, 4]
+            input.number_picker_input(
+                type="radio", 
+                id=`square-${squareIndex}-number-${num}`, 
+                name=`square-${squareIndex}-numbers`, 
+                value=num
+                data-square-index=squareIndex
+                data-x=(squareIndex-1)%4+1
+                data-y=Math.ceil(squareIndex/4)
+            )
+        label.square(for=`square-${squareIndex}` data-square-index=squareIndex data-x=(squareIndex-1)%4+1 data-y=Math.ceil(squareIndex/4))
           input.sidebar_toggle_input(type="radio", id=`square-${squareIndex}`, name="select-square")
           label.sidebar_toggle_label(for=`square-${squareIndex}`)
-          div.square_number_display(for=`x${squareIndex}-y1-label`)
           .number_picker_sidebar
             each num in [1, 2, 3, 4]
-              input.number_picker_input(type="radio", id=`x${squareIndex}-y1-n${num}`, name=`x${squareIndex}-y1`, value=num)
-              label.number_picker_label(for=`x${squareIndex}-y1-n${num}`) #{num}
+              label.number_picker_label(for=`square-${squareIndex}-number-${num}`) #{num}

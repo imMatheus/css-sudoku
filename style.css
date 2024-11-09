@@ -23,49 +23,21 @@
 .square:nth-child(4n-2) {
   border-right: 2px solid #000;
 }
-.square:nth-child(n+5):nth-child(-n+8) {
+.square:nth-child(25), .square:nth-child(30), .square:nth-child(35), .square:nth-child(40) {
   border-bottom: 2px solid #000;
-}
-.square:has(input[value="1"]:checked) .square_number_display::before {
-  content: "1";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.square:has(input[value="2"]:checked) .square_number_display::before {
-  content: "2";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.square:has(input[value="3"]:checked) .square_number_display::before {
-  content: "3";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.square:has(input[value="4"]:checked) .square_number_display::before {
-  content: "4";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .square .sidebar_toggle_label {
   position: absolute;
   inset: 0;
 }
 .square .sidebar_toggle_input:checked + .sidebar_toggle_label {
-  background-color: orange;
+  border: solid 3px #aaa;
 }
 .square .sidebar_toggle_input {
   display: none;
 }
 .square .sidebar_toggle_input:checked ~ .number_picker_sidebar {
-  background: orange;
+  background: darksalmon;
   transition: transform 250ms ease-out;
   transform: translate(0, -50%);
   z-index: 1;
@@ -90,13 +62,657 @@
 .square .number_picker_label:hover {
   background-color: #ccc;
 }
-.square .dummy__input,
-.square .number_picker_input {
+
+.number_picker_input[data-square-index="1"][value="1"]:checked ~ .square[data-square-index="1"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="1"][value="2"]:checked ~ .square[data-square-index="1"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="1"][value="3"]:checked ~ .square[data-square-index="1"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="1"][value="4"]:checked ~ .square[data-square-index="1"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="2"][value="1"]:checked ~ .square[data-square-index="2"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="2"][value="2"]:checked ~ .square[data-square-index="2"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="2"][value="3"]:checked ~ .square[data-square-index="2"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="2"][value="4"]:checked ~ .square[data-square-index="2"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="3"][value="1"]:checked ~ .square[data-square-index="3"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="3"][value="2"]:checked ~ .square[data-square-index="3"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="3"][value="3"]:checked ~ .square[data-square-index="3"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="3"][value="4"]:checked ~ .square[data-square-index="3"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="4"][value="1"]:checked ~ .square[data-square-index="4"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="4"][value="2"]:checked ~ .square[data-square-index="4"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="4"][value="3"]:checked ~ .square[data-square-index="4"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="4"][value="4"]:checked ~ .square[data-square-index="4"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="5"][value="1"]:checked ~ .square[data-square-index="5"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="5"][value="2"]:checked ~ .square[data-square-index="5"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="5"][value="3"]:checked ~ .square[data-square-index="5"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="5"][value="4"]:checked ~ .square[data-square-index="5"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="6"][value="1"]:checked ~ .square[data-square-index="6"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="6"][value="2"]:checked ~ .square[data-square-index="6"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="6"][value="3"]:checked ~ .square[data-square-index="6"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="6"][value="4"]:checked ~ .square[data-square-index="6"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="7"][value="1"]:checked ~ .square[data-square-index="7"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="7"][value="2"]:checked ~ .square[data-square-index="7"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="7"][value="3"]:checked ~ .square[data-square-index="7"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="7"][value="4"]:checked ~ .square[data-square-index="7"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="8"][value="1"]:checked ~ .square[data-square-index="8"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="8"][value="2"]:checked ~ .square[data-square-index="8"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="8"][value="3"]:checked ~ .square[data-square-index="8"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="8"][value="4"]:checked ~ .square[data-square-index="8"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="9"][value="1"]:checked ~ .square[data-square-index="9"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="9"][value="2"]:checked ~ .square[data-square-index="9"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="9"][value="3"]:checked ~ .square[data-square-index="9"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="9"][value="4"]:checked ~ .square[data-square-index="9"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="10"][value="1"]:checked ~ .square[data-square-index="10"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="10"][value="2"]:checked ~ .square[data-square-index="10"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="10"][value="3"]:checked ~ .square[data-square-index="10"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="10"][value="4"]:checked ~ .square[data-square-index="10"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="11"][value="1"]:checked ~ .square[data-square-index="11"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="11"][value="2"]:checked ~ .square[data-square-index="11"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="11"][value="3"]:checked ~ .square[data-square-index="11"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="11"][value="4"]:checked ~ .square[data-square-index="11"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="12"][value="1"]:checked ~ .square[data-square-index="12"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="12"][value="2"]:checked ~ .square[data-square-index="12"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="12"][value="3"]:checked ~ .square[data-square-index="12"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="12"][value="4"]:checked ~ .square[data-square-index="12"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="13"][value="1"]:checked ~ .square[data-square-index="13"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="13"][value="2"]:checked ~ .square[data-square-index="13"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="13"][value="3"]:checked ~ .square[data-square-index="13"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="13"][value="4"]:checked ~ .square[data-square-index="13"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="14"][value="1"]:checked ~ .square[data-square-index="14"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="14"][value="2"]:checked ~ .square[data-square-index="14"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="14"][value="3"]:checked ~ .square[data-square-index="14"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="14"][value="4"]:checked ~ .square[data-square-index="14"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="15"][value="1"]:checked ~ .square[data-square-index="15"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="15"][value="2"]:checked ~ .square[data-square-index="15"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="15"][value="3"]:checked ~ .square[data-square-index="15"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="15"][value="4"]:checked ~ .square[data-square-index="15"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="16"][value="1"]:checked ~ .square[data-square-index="16"]::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="16"][value="2"]:checked ~ .square[data-square-index="16"]::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="16"][value="3"]:checked ~ .square[data-square-index="16"]::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input[data-square-index="16"][value="4"]:checked ~ .square[data-square-index="16"]::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number_picker_input {
   width: 0;
   height: 0;
   user-select: none;
   opacity: 0;
   position: absolute;
+}
+
+.board {
+  --v: transparent;
+}
+
+body:has(.number_picker_input[value="1"][data-y="1"]:checked ~ .number_picker_input[value="1"][data-y="1"]:checked) .square[data-y="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-y="1"]:checked ~ .number_picker_input[value="2"][data-y="1"]:checked) .square[data-y="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-y="1"]:checked ~ .number_picker_input[value="3"][data-y="1"]:checked) .square[data-y="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-y="1"]:checked ~ .number_picker_input[value="4"][data-y="1"]:checked) .square[data-y="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-y="2"]:checked ~ .number_picker_input[value="1"][data-y="2"]:checked) .square[data-y="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-y="2"]:checked ~ .number_picker_input[value="2"][data-y="2"]:checked) .square[data-y="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-y="2"]:checked ~ .number_picker_input[value="3"][data-y="2"]:checked) .square[data-y="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-y="2"]:checked ~ .number_picker_input[value="4"][data-y="2"]:checked) .square[data-y="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-y="3"]:checked ~ .number_picker_input[value="1"][data-y="3"]:checked) .square[data-y="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-y="3"]:checked ~ .number_picker_input[value="2"][data-y="3"]:checked) .square[data-y="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-y="3"]:checked ~ .number_picker_input[value="3"][data-y="3"]:checked) .square[data-y="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-y="3"]:checked ~ .number_picker_input[value="4"][data-y="3"]:checked) .square[data-y="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-y="4"]:checked ~ .number_picker_input[value="1"][data-y="4"]:checked) .square[data-y="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-y="4"]:checked ~ .number_picker_input[value="2"][data-y="4"]:checked) .square[data-y="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-y="4"]:checked ~ .number_picker_input[value="3"][data-y="4"]:checked) .square[data-y="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-y="4"]:checked ~ .number_picker_input[value="4"][data-y="4"]:checked) .square[data-y="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-x="1"]:checked ~ .number_picker_input[value="1"][data-x="1"]:checked) .square[data-x="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-x="1"]:checked ~ .number_picker_input[value="2"][data-x="1"]:checked) .square[data-x="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-x="1"]:checked ~ .number_picker_input[value="3"][data-x="1"]:checked) .square[data-x="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-x="1"]:checked ~ .number_picker_input[value="4"][data-x="1"]:checked) .square[data-x="1"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-x="2"]:checked ~ .number_picker_input[value="1"][data-x="2"]:checked) .square[data-x="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-x="2"]:checked ~ .number_picker_input[value="2"][data-x="2"]:checked) .square[data-x="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-x="2"]:checked ~ .number_picker_input[value="3"][data-x="2"]:checked) .square[data-x="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-x="2"]:checked ~ .number_picker_input[value="4"][data-x="2"]:checked) .square[data-x="2"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-x="3"]:checked ~ .number_picker_input[value="1"][data-x="3"]:checked) .square[data-x="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-x="3"]:checked ~ .number_picker_input[value="2"][data-x="3"]:checked) .square[data-x="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-x="3"]:checked ~ .number_picker_input[value="3"][data-x="3"]:checked) .square[data-x="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-x="3"]:checked ~ .number_picker_input[value="4"][data-x="3"]:checked) .square[data-x="3"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="1"][data-x="4"]:checked ~ .number_picker_input[value="1"][data-x="4"]:checked) .square[data-x="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="2"][data-x="4"]:checked ~ .number_picker_input[value="2"][data-x="4"]:checked) .square[data-x="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="3"][data-x="4"]:checked ~ .number_picker_input[value="3"][data-x="4"]:checked) .square[data-x="4"] {
+  border-color: red;
+}
+
+body:has(.number_picker_input[value="4"][data-x="4"]:checked ~ .number_picker_input[value="4"][data-x="4"]:checked) .square[data-x="4"] {
+  border-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
