@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-$square-size: 80px;
+$square-size: 150px;
 $squares-count: 4;
 
 .board {
@@ -65,12 +65,13 @@ $squares-count: 4;
   }
 
   .number_picker_label {
-    width: 60px;
-    height: 60px;
+    width: 140px;
+    height: 140px;
     border: 1px solid #000;
     cursor: pointer;
     display: flex;
     align-items: center;
+    font-size: 3rem;
     justify-content: center;
 
     &:hover {
@@ -85,6 +86,7 @@ $squares-count: 4;
       ~ .square[data-square-index='#{$i}']::before {
       content: '#{$j}';
       position: absolute;
+      font-size: 3rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

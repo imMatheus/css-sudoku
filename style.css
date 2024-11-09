@@ -12,8 +12,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  width: 320px;
-  height: 320px;
+  width: 600px;
+  height: 600px;
 }
 
 .square {
@@ -51,12 +51,13 @@
   transition: transform 400ms ease-out;
 }
 .square .number_picker_label {
-  width: 60px;
-  height: 60px;
+  width: 140px;
+  height: 140px;
   border: 1px solid #000;
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-size: 3rem;
   justify-content: center;
 }
 .square .number_picker_label:hover {
@@ -66,6 +67,7 @@
 .number_picker_input[data-square-index="1"][value="1"]:checked ~ .square[data-square-index="1"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -74,6 +76,7 @@
 .number_picker_input[data-square-index="1"][value="2"]:checked ~ .square[data-square-index="1"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -82,6 +85,7 @@
 .number_picker_input[data-square-index="1"][value="3"]:checked ~ .square[data-square-index="1"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -90,6 +94,7 @@
 .number_picker_input[data-square-index="1"][value="4"]:checked ~ .square[data-square-index="1"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -98,6 +103,7 @@
 .number_picker_input[data-square-index="2"][value="1"]:checked ~ .square[data-square-index="2"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -106,6 +112,7 @@
 .number_picker_input[data-square-index="2"][value="2"]:checked ~ .square[data-square-index="2"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -114,6 +121,7 @@
 .number_picker_input[data-square-index="2"][value="3"]:checked ~ .square[data-square-index="2"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -122,6 +130,7 @@
 .number_picker_input[data-square-index="2"][value="4"]:checked ~ .square[data-square-index="2"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -130,6 +139,7 @@
 .number_picker_input[data-square-index="3"][value="1"]:checked ~ .square[data-square-index="3"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -138,6 +148,7 @@
 .number_picker_input[data-square-index="3"][value="2"]:checked ~ .square[data-square-index="3"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -146,6 +157,7 @@
 .number_picker_input[data-square-index="3"][value="3"]:checked ~ .square[data-square-index="3"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -154,6 +166,7 @@
 .number_picker_input[data-square-index="3"][value="4"]:checked ~ .square[data-square-index="3"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -162,6 +175,7 @@
 .number_picker_input[data-square-index="4"][value="1"]:checked ~ .square[data-square-index="4"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -170,6 +184,7 @@
 .number_picker_input[data-square-index="4"][value="2"]:checked ~ .square[data-square-index="4"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -178,6 +193,7 @@
 .number_picker_input[data-square-index="4"][value="3"]:checked ~ .square[data-square-index="4"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -186,6 +202,7 @@
 .number_picker_input[data-square-index="4"][value="4"]:checked ~ .square[data-square-index="4"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -194,6 +211,7 @@
 .number_picker_input[data-square-index="5"][value="1"]:checked ~ .square[data-square-index="5"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -202,6 +220,7 @@
 .number_picker_input[data-square-index="5"][value="2"]:checked ~ .square[data-square-index="5"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -210,6 +229,7 @@
 .number_picker_input[data-square-index="5"][value="3"]:checked ~ .square[data-square-index="5"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -218,6 +238,7 @@
 .number_picker_input[data-square-index="5"][value="4"]:checked ~ .square[data-square-index="5"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -226,6 +247,7 @@
 .number_picker_input[data-square-index="6"][value="1"]:checked ~ .square[data-square-index="6"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -234,6 +256,7 @@
 .number_picker_input[data-square-index="6"][value="2"]:checked ~ .square[data-square-index="6"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -242,6 +265,7 @@
 .number_picker_input[data-square-index="6"][value="3"]:checked ~ .square[data-square-index="6"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -250,6 +274,7 @@
 .number_picker_input[data-square-index="6"][value="4"]:checked ~ .square[data-square-index="6"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -258,6 +283,7 @@
 .number_picker_input[data-square-index="7"][value="1"]:checked ~ .square[data-square-index="7"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -266,6 +292,7 @@
 .number_picker_input[data-square-index="7"][value="2"]:checked ~ .square[data-square-index="7"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -274,6 +301,7 @@
 .number_picker_input[data-square-index="7"][value="3"]:checked ~ .square[data-square-index="7"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -282,6 +310,7 @@
 .number_picker_input[data-square-index="7"][value="4"]:checked ~ .square[data-square-index="7"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -290,6 +319,7 @@
 .number_picker_input[data-square-index="8"][value="1"]:checked ~ .square[data-square-index="8"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -298,6 +328,7 @@
 .number_picker_input[data-square-index="8"][value="2"]:checked ~ .square[data-square-index="8"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -306,6 +337,7 @@
 .number_picker_input[data-square-index="8"][value="3"]:checked ~ .square[data-square-index="8"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -314,6 +346,7 @@
 .number_picker_input[data-square-index="8"][value="4"]:checked ~ .square[data-square-index="8"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -322,6 +355,7 @@
 .number_picker_input[data-square-index="9"][value="1"]:checked ~ .square[data-square-index="9"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -330,6 +364,7 @@
 .number_picker_input[data-square-index="9"][value="2"]:checked ~ .square[data-square-index="9"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -338,6 +373,7 @@
 .number_picker_input[data-square-index="9"][value="3"]:checked ~ .square[data-square-index="9"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -346,6 +382,7 @@
 .number_picker_input[data-square-index="9"][value="4"]:checked ~ .square[data-square-index="9"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -354,6 +391,7 @@
 .number_picker_input[data-square-index="10"][value="1"]:checked ~ .square[data-square-index="10"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -362,6 +400,7 @@
 .number_picker_input[data-square-index="10"][value="2"]:checked ~ .square[data-square-index="10"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -370,6 +409,7 @@
 .number_picker_input[data-square-index="10"][value="3"]:checked ~ .square[data-square-index="10"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -378,6 +418,7 @@
 .number_picker_input[data-square-index="10"][value="4"]:checked ~ .square[data-square-index="10"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -386,6 +427,7 @@
 .number_picker_input[data-square-index="11"][value="1"]:checked ~ .square[data-square-index="11"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -394,6 +436,7 @@
 .number_picker_input[data-square-index="11"][value="2"]:checked ~ .square[data-square-index="11"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -402,6 +445,7 @@
 .number_picker_input[data-square-index="11"][value="3"]:checked ~ .square[data-square-index="11"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -410,6 +454,7 @@
 .number_picker_input[data-square-index="11"][value="4"]:checked ~ .square[data-square-index="11"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -418,6 +463,7 @@
 .number_picker_input[data-square-index="12"][value="1"]:checked ~ .square[data-square-index="12"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -426,6 +472,7 @@
 .number_picker_input[data-square-index="12"][value="2"]:checked ~ .square[data-square-index="12"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -434,6 +481,7 @@
 .number_picker_input[data-square-index="12"][value="3"]:checked ~ .square[data-square-index="12"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -442,6 +490,7 @@
 .number_picker_input[data-square-index="12"][value="4"]:checked ~ .square[data-square-index="12"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -450,6 +499,7 @@
 .number_picker_input[data-square-index="13"][value="1"]:checked ~ .square[data-square-index="13"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -458,6 +508,7 @@
 .number_picker_input[data-square-index="13"][value="2"]:checked ~ .square[data-square-index="13"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -466,6 +517,7 @@
 .number_picker_input[data-square-index="13"][value="3"]:checked ~ .square[data-square-index="13"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -474,6 +526,7 @@
 .number_picker_input[data-square-index="13"][value="4"]:checked ~ .square[data-square-index="13"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -482,6 +535,7 @@
 .number_picker_input[data-square-index="14"][value="1"]:checked ~ .square[data-square-index="14"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -490,6 +544,7 @@
 .number_picker_input[data-square-index="14"][value="2"]:checked ~ .square[data-square-index="14"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -498,6 +553,7 @@
 .number_picker_input[data-square-index="14"][value="3"]:checked ~ .square[data-square-index="14"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -506,6 +562,7 @@
 .number_picker_input[data-square-index="14"][value="4"]:checked ~ .square[data-square-index="14"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -514,6 +571,7 @@
 .number_picker_input[data-square-index="15"][value="1"]:checked ~ .square[data-square-index="15"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -522,6 +580,7 @@
 .number_picker_input[data-square-index="15"][value="2"]:checked ~ .square[data-square-index="15"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -530,6 +589,7 @@
 .number_picker_input[data-square-index="15"][value="3"]:checked ~ .square[data-square-index="15"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -538,6 +598,7 @@
 .number_picker_input[data-square-index="15"][value="4"]:checked ~ .square[data-square-index="15"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -546,6 +607,7 @@
 .number_picker_input[data-square-index="16"][value="1"]:checked ~ .square[data-square-index="16"]::before {
   content: "1";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -554,6 +616,7 @@
 .number_picker_input[data-square-index="16"][value="2"]:checked ~ .square[data-square-index="16"]::before {
   content: "2";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -562,6 +625,7 @@
 .number_picker_input[data-square-index="16"][value="3"]:checked ~ .square[data-square-index="16"]::before {
   content: "3";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -570,6 +634,7 @@
 .number_picker_input[data-square-index="16"][value="4"]:checked ~ .square[data-square-index="16"]::before {
   content: "4";
   position: absolute;
+  font-size: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
