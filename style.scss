@@ -39,6 +39,7 @@ $squares-count: 4;
   .sidebar_toggle_label {
     position: absolute;
     inset: 0;
+    cursor: pointer;
   }
   .sidebar_toggle_input:checked + .sidebar_toggle_label {
     border: solid 3px #aaa;

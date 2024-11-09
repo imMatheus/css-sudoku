@@ -29,6 +29,7 @@
 .square .sidebar_toggle_label {
   position: absolute;
   inset: 0;
+  cursor: pointer;
 }
 .square .sidebar_toggle_input:checked + .sidebar_toggle_label {
   border: solid 3px #aaa;
