@@ -6,14 +6,11 @@
   box-sizing: border-box;
 }
 
-body {
-}
-
-$square-size: 100px;
-$squares-count: 3;
+$square-size: 80px;
+$squares-count: 4;
 
 .board {
-  border: 1px solid #000;
+  border: 2px solid #000;
   margin: 80px auto;
   display: grid;
   grid-template-columns: repeat($squares-count, 1fr);
@@ -24,9 +21,17 @@ $squares-count: 3;
 
 .square {
   border: 1px solid #000;
-  width: $square-size;
-  height: $square-size;
+  //   width: $square-size;
+  //   height: $square-size;
   position: relative;
+
+  &:nth-child(4n-2) {
+    border-right: 2px solid #000;
+  }
+
+  &:nth-child(n + 5):nth-child(-n + 8) {
+    border-bottom: 2px solid #000;
+  }
 
   @for $i from 1 through 4 {
     &:has(input[value='#{$i}']:checked) .square_number_display::before {
@@ -41,7 +46,6 @@ $squares-count: 3;
   .sidebar_toggle_label {
     position: absolute;
     inset: 0;
-    background-color: red;
   }
   .sidebar_toggle_input:checked + .sidebar_toggle_label {
     background-color: orange;
@@ -54,6 +58,7 @@ $squares-count: 3;
       background: orange;
       transition: transform 250ms ease-out;
       transform: translate(0, -50%);
+      z-index: 1;
     }
   }
 

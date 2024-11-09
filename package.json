@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "compile": "sass style.scss:style.css --watch"
+      "pug": "pug -w . -o ./html -P",
+      "sass": "sass style.scss:style.css --watch"
   }
 }

@@ -7,20 +7,24 @@
 }
 
 .board {
-  border: 1px solid #000;
+  border: 2px solid #000;
   margin: 80px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  width: 300px;
-  height: 300px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 320px;
+  height: 320px;
 }
 
 .square {
   border: 1px solid #000;
-  width: 100px;
-  height: 100px;
   position: relative;
+}
+.square:nth-child(4n-2) {
+  border-right: 2px solid #000;
+}
+.square:nth-child(n+5):nth-child(-n+8) {
+  border-bottom: 2px solid #000;
 }
 .square:has(input[value="1"]:checked) .square_number_display::before {
   content: "1";
@@ -53,7 +57,6 @@
 .square .sidebar_toggle_label {
   position: absolute;
   inset: 0;
-  background-color: red;
 }
 .square .sidebar_toggle_input:checked + .sidebar_toggle_label {
   background-color: orange;
@@ -65,6 +68,7 @@
   background: orange;
   transition: transform 250ms ease-out;
   transform: translate(0, -50%);
+  z-index: 1;
 }
 .square .number_picker_sidebar {
   position: fixed;
