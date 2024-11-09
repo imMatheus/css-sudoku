@@ -139,3 +139,15 @@ $squares-count: 4;
     }
   }
 }
+
+@for $group from 1 through 4 {
+  @for $value from 1 through 4 {
+    body:has(
+        .number_picker_input[value='#{$value}'][data-square-group='#{$group}']:checked
+          ~ .number_picker_input[value='#{$value}'][data-square-group='#{$group}']:checked
+      )
+      .square[data-square-group='#{$group}'] {
+      border-color: red;
+    }
+  }
+}
