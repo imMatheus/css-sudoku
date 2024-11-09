@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.board {
+  border: 1px solid #000;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
+}
+
+.square {
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.square:has(input[value="1"]:checked) .square_number_display::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.square:has(input[value="2"]:checked) .square_number_display::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.square:has(input[value="3"]:checked) .square_number_display::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.square:has(input[value="4"]:checked) .square_number_display::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.square .sidebar_toggle_label {
+  position: absolute;
+  inset: 0;
+  background-color: red;
+}
+.square .sidebar_toggle_input:checked + .sidebar_toggle_label {
+  background-color: orange;
+}
+.square .sidebar_toggle_input {
+  display: none;
+}
+.square .sidebar_toggle_input:checked ~ .number_picker_sidebar {
+  background: orange;
+  transition: transform 250ms ease-out;
+  transform: translate(0, -50%);
+}
+.square .number_picker_sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  border: 1px solid #000;
+  transition: transform 400ms ease-out;
+}
+.square .number_picker_label {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.square .number_picker_label:hover {
+  background-color: #ccc;
+}
+.square .dummy__input,
+.square .number_picker_input {
+  width: 0;
+  height: 0;
+  user-select: none;
+  opacity: 0;
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

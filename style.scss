@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+$square-size: 100px;
+$squares-count: 3;
+
+.board {
+  border: 1px solid #000;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat($squares-count, 1fr);
+  grid-template-rows: repeat($squares-count, 1fr);
+  width: $square-size * $squares-count;
+  height: $square-size * $squares-count;
+}
+
+.square {
+  border: 1px solid #000;
+  width: $square-size;
+  height: $square-size;
+  position: relative;
+
+  @for $i from 1 through 4 {
+    &:has(input[value='#{$i}']:checked) .square_number_display::before {
+      content: '#{$i}';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .sidebar_toggle_label {
+    position: absolute;
+    inset: 0;
+    background-color: red;
+  }
+  .sidebar_toggle_input:checked + .sidebar_toggle_label {
+    background-color: orange;
+  }
+
+  .sidebar_toggle_input {
+    display: none;
+
+    &:checked ~ .number_picker_sidebar {
+      background: orange;
+      transition: transform 250ms ease-out;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .number_picker_sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    border: 1px solid #000;
+    // width: 100px;
+    transition: transform 400ms ease-out;
+  }
+
+  .number_picker_label {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  .dummy__input,
+  .number_picker_input {
+    width: 0;
+    height: 0;
+    user-select: none;
+    opacity: 0;
+    position: absolute;
+  }
+}

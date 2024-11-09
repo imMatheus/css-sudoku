@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="style.css")
+  body
+    .board
+      label.square(for="square-1")
+        input#square-1.sidebar_toggle_input(type="radio", name="select-square")
+        label.sidebar_toggle_label(for="square-1")
+        div.square_number_display(for="x1-y1-label")
+        .number_picker_sidebar
+          input#x1-y1-n1.number_picker_input(type="radio", name="x1-y1", value="1")
+          label.number_picker_label(for="x1-y1-n1") 1
+          input#x1-y1-n2.number_picker_input(type="radio", name="x1-y1", value="2")
+          label.number_picker_label(for="x1-y1-n2") 2
+          input#x1-y1-n3.number_picker_input(type="radio", name="x1-y1", value="3")
+          label.number_picker_label(for="x1-y1-n3") 3
+          input#x1-y1-n4.number_picker_input(type="radio", name="x1-y1", value="4")
+          label.number_picker_label(for="x1-y1-n4") 4
+      label.square(for="square-2")
+        input#square-2.sidebar_toggle_input(type="radio", name="select-square")
+        label.sidebar_toggle_label(for="square-2")
+        div.square_number_display(for="x2-y1-label")
+        .number_picker_sidebar
+          input#x2-y1-n1.number_picker_input(type="radio", name="x2-y1", value="1")
+          label.number_picker_label(for="x2-y1-n1") 1
+          input#x2-y1-n2.number_picker_input(type="radio", name="x2-y1", value="2")
+          label.number_picker_label(for="x2-y1-n2") 2
+          input#x2-y1-n3.number_picker_input(type="radio", name="x2-y1", value="3")
+          label.number_picker_label(for="x2-y1-n3") 3
+          input#x2-y1-n4.number_picker_input(type="radio", name="x2-y1", value="4")
+          label.number_picker_label(for="x2-y1-n4") 4
