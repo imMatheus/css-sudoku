@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 
-$square-size: 150px;
-$squares-count: 4;
+$square-size: 80px;
+$squares-count: 9;
 
 .board {
-  border: 2px solid #000;
+  border: 4px solid #000;
   margin: 80px auto;
   display: grid;
   grid-template-columns: repeat($squares-count, 1fr);
@@ -25,15 +25,31 @@ $squares-count: 4;
 
   // Make inner crossing borders thicker
   // second vertical row
-  &:nth-child(4n-2) {
-    border-right: 2px solid #000;
+  &:nth-child(9n-6),
+  &:nth-child(9n-3) {
+    border-right: 4px solid #000;
   }
-  // second horizontal row
-  &:nth-child(25),
-  &:nth-child(30),
-  &:nth-child(35),
-  &:nth-child(40) {
-    border-bottom: 2px solid #000;
+
+  // horizontal rows
+  &:nth-of-type(19),
+  &:nth-of-type(20),
+  &:nth-of-type(21),
+  &:nth-of-type(22),
+  &:nth-of-type(23),
+  &:nth-of-type(24),
+  &:nth-of-type(25),
+  &:nth-of-type(26),
+  &:nth-of-type(27),
+  &:nth-of-type(46),
+  &:nth-of-type(47),
+  &:nth-of-type(48),
+  &:nth-of-type(49),
+  &:nth-of-type(50),
+  &:nth-of-type(51),
+  &:nth-of-type(52),
+  &:nth-of-type(53),
+  &:nth-of-type(54) {
+    border-bottom: 4px solid #000;
   }
 
   .sidebar_toggle_label {
@@ -49,8 +65,7 @@ $squares-count: 4;
     display: none;
 
     &:checked ~ .number_picker_sidebar {
-      background: darksalmon;
-      transition: transform 250ms ease-out;
+      //   transition: transform 250ms ease-out;
       transform: translate(0, -50%);
       z-index: 1;
     }
@@ -60,29 +75,32 @@ $squares-count: 4;
     position: fixed;
     left: 0;
     top: 50%;
+    background: #26f;
+
     transform: translate(-100%, -50%);
     border: 1px solid #000;
-    transition: transform 400ms ease-out;
+    // transition: transform 250ms ease-out;
   }
 
   .number_picker_label {
-    width: 140px;
-    height: 140px;
+    width: 70px;
+    height: 70px;
     border: 1px solid #000;
     cursor: pointer;
     display: flex;
     align-items: center;
     font-size: 3rem;
     justify-content: center;
+    transition: background-color 250ms ease-out;
 
     &:hover {
-      background-color: #ccc;
+      background-color: #48f;
     }
   }
 }
 
-@for $i from 1 through 16 {
-  @for $j from 1 through 4 {
+@for $i from 1 through $squares-count * $squares-count {
+  @for $j from 1 through $squares-count {
     .number_picker_input[data-square-index='#{$i}'][value='#{$j}']:checked
       ~ .square[data-square-index='#{$i}']::before {
       content: '#{$j}';
@@ -103,22 +121,8 @@ $squares-count: 4;
   position: absolute;
 }
 
-// @for $i from 1 through 4 {
-//   @for $j from 1 through 2 {
-//     .square[data-x='#{$i}']:has(
-//         .number_picker_input[value='#{$j}']:checked
-//       ):has(~ .square[data-x='#{$i}']) {
-//       background: pink !important;
-//     }
-//   }
-// }
-
-.board {
-  --v: transparent;
-}
-
-@for $y from 1 through 4 {
-  @for $value from 1 through 4 {
+@for $y from 1 through $squares-count {
+  @for $value from 1 through $squares-count {
     body:has(
         .number_picker_input[value='#{$value}'][data-y='#{$y}']:checked
           ~ .number_picker_input[value='#{$value}'][data-y='#{$y}']:checked
@@ -129,8 +133,8 @@ $squares-count: 4;
   }
 }
 
-@for $x from 1 through 4 {
-  @for $value from 1 through 4 {
+@for $x from 1 through $squares-count {
+  @for $value from 1 through $squares-count {
     body:has(
         .number_picker_input[value='#{$value}'][data-x='#{$x}']:checked
           ~ .number_picker_input[value='#{$value}'][data-x='#{$x}']:checked
@@ -141,8 +145,8 @@ $squares-count: 4;
   }
 }
 
-@for $group from 1 through 4 {
-  @for $value from 1 through 4 {
+@for $group from 1 through $squares-count {
+  @for $value from 1 through $squares-count {
     body:has(
         .number_picker_input[value='#{$value}'][data-square-group='#{$group}']:checked
           ~ .number_picker_input[value='#{$value}'][data-square-group='#{$group}']:checked
