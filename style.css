@@ -48,6 +48,7 @@
   background: #26f;
   transform: translate(-100%, -50%);
   border: 1px solid #000;
+  transition: transform 250ms ease-out;
 }
 .square .number_picker_label {
   width: 70px;

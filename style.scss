@@ -79,7 +79,7 @@ $squares-count: 9;
 
     transform: translate(-100%, -50%);
     border: 1px solid #000;
-    // transition: transform 250ms ease-out;
+    transition: transform 250ms ease-out;
   }
 
   .number_picker_label {
