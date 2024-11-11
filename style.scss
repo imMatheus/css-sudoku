@@ -6,12 +6,19 @@
   box-sizing: border-box;
 }
 
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 $square-size: 80px;
 $squares-count: 9;
 
 .board {
   border: 4px solid #000;
-  margin: 80px auto;
   display: grid;
   grid-template-columns: repeat($squares-count, 1fr);
   grid-template-rows: repeat($squares-count, 1fr);
@@ -76,7 +83,8 @@ $squares-count: 9;
     left: 0;
     top: 50%;
     background: #26f;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     transform: translate(-100%, -50%);
     border: 1px solid #000;
     transition: transform 250ms ease-out;
@@ -155,4 +163,54 @@ $squares-count: 9;
       border-color: red;
     }
   }
+}
+
+$winningSelector: '';
+
+@for $i from 1 through $squares-count {
+  @for $value from 1 through $squares-count {
+    $winningSelector: #{$winningSelector} +
+      ":not(:has(.number_picker_input[value='" +
+      $value +
+      "'][data-square-group='" +
+      $i +
+      "']:checked ~ .number_picker_input[value='" +
+      $value +
+      "'][data-square-group='" +
+      $i +
+      "']:checked))";
+    $winningSelector: #{$winningSelector} +
+      ":not(:has(.number_picker_input[value='" +
+      $value +
+      "'][data-x='" +
+      $i +
+      "']:checked ~ .number_picker_input[value='" +
+      $value +
+      "'][data-x='" +
+      $i +
+      "']:checked))";
+    $winningSelector: #{$winningSelector} +
+      ":not(:has(.number_picker_input[value='" +
+      $value +
+      "'][data-y='" +
+      $i +
+      "']:checked ~ .number_picker_input[value='" +
+      $value +
+      "'][data-y='" +
+      $i +
+      "']:checked))";
+  }
+}
+
+.winner_button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid #000;
+  display: none;
+}
+
+body#{$winningSelector}:not(:has(.number_picker_input[value='0']:checked))
+  .winner_button {
+  display: block;
 }
