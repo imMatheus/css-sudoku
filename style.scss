@@ -1,9 +1,16 @@
+@use 'sass:math';
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .center-wrapper {
@@ -14,7 +21,15 @@
   min-height: 100vh;
 }
 
-$square-size: 80px;
+.close-sidebar {
+  display: none;
+}
+
+.description-list {
+  margin-bottom: 1rem;
+}
+
+$square-size: 70px;
 $squares-count: 9;
 
 .board {
@@ -29,6 +44,7 @@ $squares-count: 9;
 .square {
   border: 1px solid #000;
   position: relative;
+  transition: background-color 150ms;
 
   // Make inner crossing borders thicker
   // second vertical row
@@ -65,7 +81,7 @@ $squares-count: 9;
     cursor: pointer;
   }
   .sidebar_toggle_input:checked + .sidebar_toggle_label {
-    border: solid 3px #aaa;
+    border: solid 3px #a1a1aa;
   }
 
   .sidebar_toggle_input {
@@ -73,36 +89,71 @@ $squares-count: 9;
 
     &:checked ~ .number_picker_sidebar {
       //   transition: transform 250ms ease-out;
-      transform: translate(0, -50%);
+      // transform: translate(0, -50%);
       z-index: 1;
+      display: grid;
+      animation: sidebar-appear 250ms;
     }
   }
 
   .number_picker_sidebar {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    background: #26f;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    transform: translate(-100%, -50%);
-    border: 1px solid #000;
-    transition: transform 250ms ease-out;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    background: #18181b;
+    color: white;
+    grid-template-columns: repeat(5, 1fr);
+    transform: translate(-50%, -100%);
+    display: none;
+    border: 1px solid #27272a;
+    animation: sidebar-disappear 250ms;
+  }
+  &[data-y='1'],
+  &[data-y='2'] {
+    .number_picker_sidebar {
+      top: unset;
+      bottom: -10px;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+  @keyframes sidebar-appear {
+    from {
+      scale: 0.9;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  @keyframes sidebar-disappear {
+    from {
+      display: grid;
+      opacity: 1;
+      scale: 1;
+    }
+    to {
+      display: none;
+      opacity: 0;
+      scale: 0.9;
+    }
   }
 
   .number_picker_label {
     width: 70px;
     height: 70px;
-    border: 1px solid #000;
+    border: 1px solid #27272a;
+    font-size: 3rem;
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: 3rem;
     justify-content: center;
     transition: background-color 250ms ease-out;
 
     &:hover {
-      background-color: #48f;
+      background-color: #27272a;
     }
   }
 }
@@ -129,38 +180,29 @@ $squares-count: 9;
   position: absolute;
 }
 
-@for $y from 1 through $squares-count {
+@for $i from 1 through $squares-count {
   @for $value from 1 through $squares-count {
+    // Check for same value in the same group
     body:has(
-        .number_picker_input[value='#{$value}'][data-y='#{$y}']:checked
-          ~ .number_picker_input[value='#{$value}'][data-y='#{$y}']:checked
-      )
-      .square[data-y='#{$y}'] {
-      border-color: red;
-    }
-  }
-}
+      .number_picker_input[value='#{$value}'][data-square-group='#{$i}']:checked
+      ~ .number_picker_input[value='#{$value}'][data-square-group='#{$i}']:checked
+    )
+    .square[data-square-group='#{$i}'],
 
-@for $x from 1 through $squares-count {
-  @for $value from 1 through $squares-count {
+    // Check for same value on row
     body:has(
-        .number_picker_input[value='#{$value}'][data-x='#{$x}']:checked
-          ~ .number_picker_input[value='#{$value}'][data-x='#{$x}']:checked
-      )
-      .square[data-x='#{$x}'] {
-      border-color: red;
-    }
-  }
-}
+      .number_picker_input[value='#{$value}'][data-y='#{$i}']:checked
+      ~ .number_picker_input[value='#{$value}'][data-y='#{$i}']:checked
+    )
+    .square[data-y='#{$i}'],
 
-@for $group from 1 through $squares-count {
-  @for $value from 1 through $squares-count {
+    // Check for same value on column
     body:has(
-        .number_picker_input[value='#{$value}'][data-square-group='#{$group}']:checked
-          ~ .number_picker_input[value='#{$value}'][data-square-group='#{$group}']:checked
-      )
-      .square[data-square-group='#{$group}'] {
-      border-color: red;
+      .number_picker_input[value='#{$value}'][data-x='#{$i}']:checked
+      ~ .number_picker_input[value='#{$value}'][data-x='#{$i}']:checked
+    )
+    .square[data-x='#{$i}'] {
+      background: rgb(236, 31, 31);
     }
   }
 }
@@ -202,15 +244,38 @@ $winningSelector: '';
   }
 }
 
-.winner_button {
-  font-size: 1rem;
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border: 1px solid #000;
+.icon {
+  position: absolute;
+  animation: fallAnimation infinite linear;
+  font-size: 2rem;
   display: none;
+  @for $i from 1 through 101 {
+    &:nth-child(#{$i}) {
+      left: calc(math.random(100) * 1%);
+      animation-delay: calc(-1 * math.random(4000) * 1ms);
+      animation-duration: calc(math.random(4000) * 1ms);
+      animation-timing-function: cubic-bezier(
+        math.div(math.random(100), 100),
+        math.div(math.random(100), 100),
+        math.div(math.random(100), 100),
+        math.div(math.random(100), 100)
+      );
+    }
+  }
+}
+
+@keyframes fallAnimation {
+  from {
+    top: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    top: 100vh;
+    transform: translateY(0%);
+  }
 }
 
 body#{$winningSelector}:not(:has(.number_picker_input[value='0']:checked))
-  .winner_button {
+  .icon {
   display: block;
 }

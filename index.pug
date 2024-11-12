@@ -6,7 +6,16 @@ html(lang="en")
     title Document
     link(rel="stylesheet", href="style.css")
   body
-  .center-wrapper
+  label.center-wrapper(for="close-sidebar")
+    input.close-sidebar(type="radio", id="close-sidebar", name="select-square")
+    h1 CSS only Sudoku
+    ul.description-list 
+      li Knows when you have invalid numbers (in row, column or group)
+      li Shows when you have a valid board with a party animation
+    - const icons = ['🎉', '🥳', '🎊']
+    - for (let i = 0; i < 100; i++) {
+      .icon= icons[Math.floor(Math.random() * icons.length)]
+    - }
     .board
       each square in [ {index: 1, group: 1}, {index: 2, group: 1}, {index: 3, group: 1}, {index: 4, group: 2}, {index: 5, group: 2}, {index: 6, group: 2}, {index: 7, group: 3}, {index: 8, group: 3}, {index: 9, group: 3}, {index: 10, group: 1}, {index: 11, group: 1}, {index: 12, group: 1}, {index: 13, group: 2}, {index: 14, group: 2}, {index: 15, group: 2}, {index: 16, group: 3}, {index: 17, group: 3}, {index: 18, group: 3}, {index: 19, group: 1}, {index: 20, group: 1}, {index: 21, group: 1}, {index: 22, group: 2}, {index: 23, group: 2}, {index: 24, group: 2}, {index: 25, group: 3}, {index: 26, group: 3}, {index: 27, group: 3}, {index: 28, group: 4}, {index: 29, group: 4}, {index: 30, group: 4}, {index: 31, group: 5}, {index: 32, group: 5}, {index: 33, group: 5}, {index: 34, group: 6}, {index: 35, group: 6}, {index: 36, group: 6}, {index: 37, group: 4}, {index: 38, group: 4}, {index: 39, group: 4}, {index: 40, group: 5}, {index: 41, group: 5}, {index: 42, group: 5}, {index: 43, group: 6}, {index: 44, group: 6}, {index: 45, group: 6}, {index: 46, group: 4}, {index: 47, group: 4}, {index: 48, group: 4}, {index: 49, group: 5}, {index: 50, group: 5}, {index: 51, group: 5}, {index: 52, group: 6}, {index: 53, group: 6}, {index: 54, group: 6}, {index: 55, group: 7}, {index: 56, group: 7}, {index: 57, group: 7}, {index: 58, group: 8}, {index: 59, group: 8}, {index: 60, group: 8}, {index: 61, group: 9}, {index: 62, group: 9}, {index: 63, group: 9}, {index: 64, group: 7}, {index: 65, group: 7}, {index: 66, group: 7}, {index: 67, group: 8}, {index: 68, group: 8}, {index: 69, group: 8}, {index: 70, group: 9}, {index: 71, group: 9}, {index: 72, group: 9}, {index: 73, group: 7}, {index: 74, group: 7}, {index: 75, group: 7}, {index: 76, group: 8}, {index: 77, group: 8}, {index: 78, group: 8}, {index: 79, group: 9}, {index: 80, group: 9}, {index: 81, group: 9} ]
         each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -27,4 +36,3 @@ html(lang="en")
           .number_picker_sidebar
             each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
               label.number_picker_label(for=`square-${square.index}-number-${num}`)=num===0 ? "X" : num
-    button.winner_button You won!
