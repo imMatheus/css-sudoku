@@ -295,39 +295,6 @@ $squares-count: 9;
     border-bottom: 4px solid #000;
   }
 
-  .sidebar_toggle_label {
-    position: absolute;
-    inset: 0;
-    cursor: pointer;
-  }
-  .sidebar_toggle_input:checked + .sidebar_toggle_label {
-    border: solid 3px #a1a1aa;
-  }
-
-  .sidebar_toggle_input {
-    display: none;
-
-    &:checked ~ .number_picker_sidebar {
-      //   transition: transform 250ms ease-out;
-      // transform: translate(0, -50%);
-      z-index: 1;
-      display: grid;
-      animation: sidebar-appear 250ms;
-    }
-  }
-
-  .number_picker_sidebar {
-    position: absolute;
-    left: 50%;
-    top: -10px;
-    background: #18181b;
-    color: white;
-    grid-template-columns: repeat(5, 1fr);
-    transform: translate(-50%, -100%);
-    display: none;
-    border: 1px solid #27272a;
-    animation: sidebar-disappear 250ms;
-  }
   &[data-y='1'],
   &[data-y='2'] {
     .number_picker_sidebar {
@@ -336,24 +303,57 @@ $squares-count: 9;
       transform: translate(-50%, 100%);
     }
   }
+}
 
-  .number_picker_label {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #27272a;
-    font-size: 3rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms ease-out;
+.sidebar_toggle_label {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+.sidebar_toggle_input:checked + .sidebar_toggle_label {
+  border: solid 3px #a1a1aa;
+}
 
-    &:hover {
-      background-color: #27272a;
-    }
+.sidebar_toggle_input {
+  display: none;
+
+  &:checked ~ .number_picker_sidebar {
+    //   transition: transform 250ms ease-out;
+    // transform: translate(0, -50%);
+    z-index: 1;
+    display: grid;
+    animation: sidebar-appear 250ms;
   }
 }
 
+.number_picker_sidebar {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  background: #18181b;
+  color: white;
+  grid-template-columns: repeat(5, 1fr);
+  transform: translate(-50%, -100%);
+  display: none;
+  border: 1px solid #27272a;
+  animation: sidebar-disappear 250ms;
+}
+
+.number_picker_label {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #27272a;
+  font-size: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms ease-out;
+
+  &:hover {
+    background-color: #27272a;
+  }
+}
 @keyframes sidebar-appear {
   from {
     scale: 0.9;
