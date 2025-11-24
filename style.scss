@@ -337,30 +337,6 @@ $squares-count: 9;
     }
   }
 
-  @keyframes sidebar-appear {
-    from {
-      scale: 0.9;
-      opacity: 0;
-    }
-    to {
-      scale: 1;
-      opacity: 1;
-    }
-  }
-
-  @keyframes sidebar-disappear {
-    from {
-      display: grid;
-      opacity: 1;
-      scale: 1;
-    }
-    to {
-      display: none;
-      opacity: 0;
-      scale: 0.9;
-    }
-  }
-
   .number_picker_label {
     width: 70px;
     height: 70px;
@@ -375,6 +351,30 @@ $squares-count: 9;
     &:hover {
       background-color: #27272a;
     }
+  }
+}
+
+@keyframes sidebar-appear {
+  from {
+    scale: 0.9;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes sidebar-disappear {
+  from {
+    display: grid;
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    scale: 0.9;
   }
 }
 
