@@ -8,17 +8,232 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.center-wrapper {
+body {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  flex-direction: column;
+  // background-color: #f2e8cf;
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
+  font-size: 11px;
+  background-color: #008080;
+  // background: linear-gradient(135deg, #008080 0%, #1084d7 100%);
+}
+
+.win99-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: #c0c0c0;
+  border-top: 2px solid;
+  border-top-color: #dfdfdf;
+  border-bottom: 2px solid;
+  border-bottom-color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px;
+  gap: 2px;
+  box-shadow: inset 0 1px 0 #ffffff, inset 0 -1px 0 #000080;
+}
+
+.win99-start-button-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.win99-start-button {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  color: #000000;
+  padding: 3px 8px;
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.05s;
+  user-select: none;
+}
+
+.win99-start-button:active {
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #dfdfdf;
+  border-bottom-color: #dfdfdf;
+}
+
+/* Windows 99 Window Styling */
+.win99-window {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #000080,
+    1px 1px 0 #dfdfdf, 2px 2px 0 #808080;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.win99-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d7 100%);
+  color: #ffffff;
+  padding: 2px 2px 2px 4px;
+  font-weight: bold;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000080;
+  height: 20px;
+  user-select: none;
+}
+
+.win99-button {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  color: #000000;
+  padding: 3px 6px;
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  min-width: 75px;
+  text-align: center;
+  transition: all 0.05s;
+  user-select: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.header {
+  position: absolute;
+  top: 8px;
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+.goBackButton {
+  display: none;
+}
+
+.goBackButtonLabel {
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// a go back button for once the game is started
+.game-difficulty-input[id='game-difficulty-easy']:checked
+  ~ .header
+  .goBackButtonLabel,
+.game-difficulty-input[id='game-difficulty-medium']:checked
+  ~ .header
+  .goBackButtonLabel,
+.game-difficulty-input[id='game-difficulty-hard']:checked
+  ~ .header
+  .goBackButtonLabel {
+  display: block;
+}
+
+.game-difficulty-input {
+  display: none;
+}
+
+.difficulty-picker {
+  p {
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .difficulty-picker-labels {
+    display: flex;
+    gap: 12px;
+
+    label {
+      padding: 16px;
+      border-radius: 18px;
+      color: #fff;
+      height: 100px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      border: 2px solid #000;
+      transition: transform 150ms ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:nth-child(1) {
+        background-color: #6a994e;
+        border-color: #567346;
+      }
+      &:nth-child(2) {
+        background-color: #403d39;
+        border-color: #2a2928;
+      }
+      &:nth-child(3) {
+        background-color: #bc4749;
+        border-color: #9e4446;
+      }
+    }
+  }
+}
+
+.game-easy,
+.game-medium,
+.game-hard {
+  display: none;
+}
+
+.game-difficulty-input[id='game-difficulty-easy']:checked ~ .game-easy,
+.game-difficulty-input[id='game-difficulty-medium']:checked ~ .game-medium,
+.game-difficulty-input[id='game-difficulty-hard']:checked ~ .game-hard {
+  display: block;
+}
+
+.game-difficulty-input[id='game-difficulty-easy']:checked ~ .difficulty-picker,
+.game-difficulty-input[id='game-difficulty-medium']:checked
+  ~ .difficulty-picker,
+.game-difficulty-input[id='game-difficulty-hard']:checked ~ .difficulty-picker {
+  display: none;
 }
 
 .close-sidebar {
@@ -52,6 +267,11 @@ $squares-count: 9;
   &:nth-child(9n-3) {
     border-right: 4px solid #000;
   }
+
+  // &:nth-of-type(n + 7):nth-of-type(-n + 17),
+  // &:nth-of-type(n + 28):nth-of-type(-n + 36) {
+  //   border-bottom: 4px solid #000;
+  // }
 
   // horizontal rows
   &:nth-of-type(19),
