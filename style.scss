@@ -242,56 +242,70 @@ $squares-count: 9;
 }
 
 .game-easy .board {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 .game-medium .board {
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  .square {
+    // second vertical row
+    &:nth-child(6n-3) {
+      border-right: 4px solid #000;
+    }
+
+    // horizontal rows
+    &:nth-of-type(n + 13):nth-of-type(-n + 18) {
+      border-bottom: 4px solid #000;
+    }
+  }
 }
 .game-hard .board {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 1fr);
+
+  .square {
+    // Make inner crossing borders thicker
+    // second vertical row
+    &:nth-child(9n-6),
+    &:nth-child(9n-3) {
+      border-right: 4px solid #000;
+    }
+
+    // &:nth-of-type(n + 7):nth-of-type(-n + 17),
+    // &:nth-of-type(n + 28):nth-of-type(-n + 36) {
+    //   border-bottom: 4px solid #000;
+    // }
+
+    // horizontal rows
+    &:nth-of-type(19),
+    &:nth-of-type(20),
+    &:nth-of-type(21),
+    &:nth-of-type(22),
+    &:nth-of-type(23),
+    &:nth-of-type(24),
+    &:nth-of-type(25),
+    &:nth-of-type(26),
+    &:nth-of-type(27),
+    &:nth-of-type(46),
+    &:nth-of-type(47),
+    &:nth-of-type(48),
+    &:nth-of-type(49),
+    &:nth-of-type(50),
+    &:nth-of-type(51),
+    &:nth-of-type(52),
+    &:nth-of-type(53),
+    &:nth-of-type(54) {
+      border-bottom: 4px solid #000;
+    }
+  }
 }
 
 .square {
   border: 1px solid #000;
   position: relative;
   transition: background-color 150ms;
-
-  // Make inner crossing borders thicker
-  // second vertical row
-  &:nth-child(9n-6),
-  &:nth-child(9n-3) {
-    border-right: 4px solid #000;
-  }
-
-  // &:nth-of-type(n + 7):nth-of-type(-n + 17),
-  // &:nth-of-type(n + 28):nth-of-type(-n + 36) {
-  //   border-bottom: 4px solid #000;
-  // }
-
-  // horizontal rows
-  &:nth-of-type(19),
-  &:nth-of-type(20),
-  &:nth-of-type(21),
-  &:nth-of-type(22),
-  &:nth-of-type(23),
-  &:nth-of-type(24),
-  &:nth-of-type(25),
-  &:nth-of-type(26),
-  &:nth-of-type(27),
-  &:nth-of-type(46),
-  &:nth-of-type(47),
-  &:nth-of-type(48),
-  &:nth-of-type(49),
-  &:nth-of-type(50),
-  &:nth-of-type(51),
-  &:nth-of-type(52),
-  &:nth-of-type(53),
-  &:nth-of-type(54) {
-    border-bottom: 4px solid #000;
-  }
 
   &[data-y='1'],
   &[data-y='2'] {
