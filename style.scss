@@ -490,35 +490,35 @@ $winningSelector: '';
   }
 }
 
-.icon {
-  position: absolute;
-  animation: fallAnimation infinite linear;
-  font-size: 2rem;
-  display: none;
-  @for $i from 1 through 101 {
-    &:nth-child(#{$i}) {
-      left: calc(math.random(100) * 1%);
-      animation-duration: calc(math.random(4000) * 1ms);
-      animation-timing-function: cubic-bezier(
-        math.div(math.random(100), 100),
-        math.div(math.random(100), 100),
-        math.div(math.random(100), 100),
-        math.div(math.random(100), 100)
-      );
-    }
-  }
-}
+// .icon {
+//   position: absolute;
+//   animation: fallAnimation infinite linear;
+//   font-size: 2rem;
+//   display: none;
+//   @for $i from 1 through 101 {
+//     &:nth-child(#{$i}) {
+//       left: calc(math.random(100) * 1%);
+//       animation-duration: calc(math.random(4000) * 1ms);
+//       animation-timing-function: cubic-bezier(
+//         math.div(math.random(100), 100),
+//         math.div(math.random(100), 100),
+//         math.div(math.random(100), 100),
+//         math.div(math.random(100), 100)
+//       );
+//     }
+//   }
+// }
 
-@keyframes fallAnimation {
-  from {
-    top: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    top: 100vh;
-    transform: translateY(0%);
-  }
-}
+// @keyframes fallAnimation {
+//   from {
+//     top: 0;
+//     transform: translateY(-100%);
+//   }
+//   to {
+//     top: 100vh;
+//     transform: translateY(0%);
+//   }
+// }
 
 body#{$winningSelector}:not(:has(.number_picker_input[value='0']:checked))
   .icon {
