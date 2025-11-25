@@ -39,8 +39,8 @@ html(lang="en")
       div
         p Easy mode
       label.win99-button(for="goBackButton") ×
-    label(for="close-sidebar")
-      input.close-sidebar(type="radio", id="close-sidebar", name="select-square")
+    input.close-sidebar(type="radio", id="easy-close-sidebar", name="select-square")
+    label(for="easy-close-sidebar").board
       - var gridSize = 2 // Change this to adjust the grid size (e.g., 4, 9, 16, 25)
       - var blockSize = Math.sqrt(gridSize); // Size of each block/group
       - var squares = [];
@@ -50,34 +50,33 @@ html(lang="en")
       -   var group = Math.floor(row / blockSize) * blockSize + Math.floor(col / blockSize) + 1;
       -   squares.push({ index: i + 1, group: group });
       - }
-      .board
-        each square in squares
-          each num in [0, 1, 2, 3, 4]
-              input.number_picker_input(
-                  type="radio", 
-                  id=`board-easy-square-${square.index}-number-${num}`, 
-                  name=`board-easy-square-${square.index}-numbers`, 
-                  value=num
-                  checked=num===0
-                  data-square-index=square.index
-                  data-square-group=square.group
-                  data-x=(square.index-1)%9+1
-                  data-y=Math.ceil(square.index/9)
-              )
-          label.square(for=`board-easy-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
-            input.sidebar_toggle_input(type="radio", id=`board-easy-square-${square.index}`, name="select-square")
-            label.sidebar_toggle_label(for=`board-easy-square-${square.index}`)
-            .number_picker_sidebar
-              each num in [0, 1, 2, 3, 4]
-                label.number_picker_label(for=`board-easy-square-${square.index}-number-${num}`)=num===0 ? "X" : num
+      each square in squares
+        each num in [0, 1, 2, 3, 4]
+            input.number_picker_input(
+                type="radio", 
+                id=`board-easy-square-${square.index}-number-${num}`, 
+                name=`board-easy-square-${square.index}-numbers`, 
+                value=num
+                checked=num===0
+                data-square-index=square.index
+                data-square-group=square.group
+                data-x=(square.index-1)%9+1
+                data-y=Math.ceil(square.index/9)
+            )
+        label.square(for=`board-easy-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
+          input.sidebar_toggle_input(type="radio", id=`board-easy-square-${square.index}`, name="select-square")
+          label.sidebar_toggle_label(for=`board-easy-square-${square.index}`)
+          .number_picker_sidebar
+            each num in [0, 1, 2, 3, 4]
+              label.number_picker_label(for=`board-easy-square-${square.index}-number-${num}`)=num===0 ? "X" : num
  
   .game-medium.win99-window
     .win99-title-bar
       div
         p Medium mode
       label.win99-button(for="goBackButton") ×
-    label(for="close-sidebar")
-      input.close-sidebar(type="radio", id="close-sidebar", name="select-square")
+    input.close-sidebar(type="radio", id="medium-close-sidebar", name="select-square")
+    label(for="medium-close-sidebar").board
       - var gridSize = 2 // Change this to adjust the grid size (e.g., 4, 9, 16, 25)
       - var blockSize = Math.sqrt(gridSize); // Size of each block/group
       - var squares = [];
@@ -87,34 +86,33 @@ html(lang="en")
       -   var group = Math.floor(row / blockSize) * blockSize + Math.floor(col / blockSize) + 1;
       -   squares.push({ index: i + 1, group: group });
       - }
-      .board
-        each square in squares
-          each num in [0, 1, 2, 3, 4]
-              input.number_picker_input(
-                  type="radio", 
-                  id=`board-medium-square-${square.index}-number-${num}`, 
-                  name=`board-medium-square-${square.index}-numbers`, 
-                  value=num
-                  checked=num===0
-                  data-square-index=square.index
-                  data-square-group=square.group
-                  data-x=(square.index-1)%9+1
-                  data-y=Math.ceil(square.index/9)
-              )
-          label.square(for=`board-medium-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
-            input.sidebar_toggle_input(type="radio", id=`board-medium-square-${square.index}`, name="select-square")
-            label.sidebar_toggle_label(for=`board-medium-square-${square.index}`)
-            .number_picker_sidebar
-              each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                label.number_picker_label(for=`board-medium-square-${square.index}-number-${num}`)=num===0 ? "X" : num
+      each square in squares
+        each num in [0, 1, 2, 3, 4]
+            input.number_picker_input(
+                type="radio", 
+                id=`board-medium-square-${square.index}-number-${num}`, 
+                name=`board-medium-square-${square.index}-numbers`, 
+                value=num
+                checked=num===0
+                data-square-index=square.index
+                data-square-group=square.group
+                data-x=(square.index-1)%9+1
+                data-y=Math.ceil(square.index/9)
+            )
+        label.square(for=`board-medium-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
+          input.sidebar_toggle_input(type="radio", id=`board-medium-square-${square.index}`, name="select-square")
+          label.sidebar_toggle_label(for=`board-medium-square-${square.index}`)
+          .number_picker_sidebar
+            each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+              label.number_picker_label(for=`board-medium-square-${square.index}-number-${num}`)=num===0 ? "X" : num
   
   .game-hard.win99-window
     .win99-title-bar
       div
         p Hard mode
       label.win99-button(for="goBackButton") ×
-    label(for="close-sidebar")
-      input.close-sidebar(type="radio", id="close-sidebar", name="select-square")
+    label(for="hard-close-sidebar")
+      input.close-sidebar(type="radio", id="hard-close-sidebar", name="select-square")
       - var gridSize = 9 // Change this to adjust the grid size (e.g., 4, 9, 16, 25)
       - var blockSize = Math.sqrt(gridSize); // Size of each block/group
       - var squares = [];
