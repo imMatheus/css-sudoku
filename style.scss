@@ -1,5 +1,12 @@
 @use 'sass:math';
 
+.pixelify-sans {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -10,12 +17,9 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   // background-color: #f2e8cf;
   // font-family: 'Roboto', sans-serif;
+  // font-family: 'Pixelify Sans', sans-serif;
   font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
   font-size: 11px;
   background-color: #008080;
@@ -56,7 +60,6 @@ body {
   border-bottom-color: #808080;
   color: #000000;
   padding: 3px 8px;
-  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
   font-weight: bold;
   font-size: 11px;
   cursor: pointer;
@@ -115,7 +118,6 @@ body {
   border-bottom-color: #808080;
   color: #000000;
   padding: 3px 6px;
-  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
   font-size: 11px;
   cursor: pointer;
   min-width: 75px;
@@ -132,27 +134,8 @@ body {
   font-weight: bold;
 }
 
-.header {
-  position: absolute;
-  top: 8px;
-
-  h1 {
-    font-size: 1.6rem;
-    font-weight: 600;
-  }
-}
-
 .goBackButton {
   display: none;
-}
-
-.goBackButtonLabel {
-  display: none;
-  font-size: 12px;
-  font-weight: 500;
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 // a go back button for once the game is started
@@ -172,47 +155,49 @@ body {
   display: none;
 }
 
-.difficulty-picker {
-  p {
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
+.difficulty-picker-labels {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
 
-  .difficulty-picker-labels {
+  label {
+    // border: 2px solid #000;
+    color: #fff;
+    width: 80px;
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    overflow: auto;
 
-    label {
-      padding: 16px;
-      border-radius: 18px;
-      color: #fff;
-      height: 100px;
-      width: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    &:hover {
+      #easy-difficulty-label {
+        background-color: oklch(62.7% 0.194 149.214);
+      }
+      #medium-difficulty-label {
+        background-color: oklch(68.1% 0.162 75.834);
+      }
+      #hard-difficulty-label {
+        background-color: oklch(57.7% 0.245 27.325);
+      }
+    }
+
+    img {
+      width: 76px;
+      height: 76px;
+    }
+    p {
+      font-size: 12px;
       font-weight: 600;
-      font-size: 14px;
-      border: 2px solid #000;
-      transition: transform 150ms ease-in-out;
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-
-      &:nth-child(1) {
-        background-color: #6a994e;
-        border-color: #567346;
-      }
-      &:nth-child(2) {
-        background-color: #403d39;
-        border-color: #2a2928;
-      }
-      &:nth-child(3) {
-        background-color: #bc4749;
-        border-color: #9e4446;
-      }
+      margin-top: -8px;
+      padding: 2px 2px;
+      width: 100%;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 1.2;
+      transition: background-color 75ms ease-in-out;
     }
   }
 }

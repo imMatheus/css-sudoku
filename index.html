@@ -3,29 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&amp;display=swap" rel="stylesheet">
+    <title>CSS Only Sudoku</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body></body>
   <input class="game-difficulty-input" type="radio" id="game-difficulty-easy" name="game-difficulty">
   <input class="game-difficulty-input" type="radio" id="game-difficulty-medium" name="game-difficulty">
   <input class="game-difficulty-input" type="radio" id="game-difficulty-hard" name="game-difficulty">
-  <div class="header"> 
-    <h1>CSS only Sudoku</h1>
-    <label class="goBackButtonLabel" for="goBackButton">← Go back</label>
-    <input class="goBackButton" type="radio" id="goBackButton" name="game-difficulty">
-    <ul class="description-list"> 
-      <li>Knows when you have invalid numbers (in row, column or group)</li>
-      <li>Shows when you have a valid board with a party animation</li>
-    </ul>
-  </div>
-  <div class="difficulty-picker">
-    <p>Choose a difficulty for your game</p>
-    <div class="difficulty-picker-labels">
-      <label class="difficulty-picker-label" for="game-difficulty-easy">Easy</label>
-      <label class="difficulty-picker-label" for="game-difficulty-medium">Medium</label>
-      <label class="difficulty-picker-label" for="game-difficulty-hard">Hard</label>
-    </div>
+  <input class="goBackButton" type="radio" id="goBackButton" name="game-difficulty">
+  <div class="difficulty-picker-labels">
+    <label for="game-difficulty-easy"> <img src="sudoku.png" alt="Easy">
+      <p id="easy-difficulty-label">Easy <br/> Sudoku</p>
+    </label>
+    <label for="game-difficulty-medium"><img src="sudoku.png" alt="Medium">
+      <p id="medium-difficulty-label">Medium <br/> Sudoku</p>
+    </label>
+    <label for="game-difficulty-hard"> <img src="sudoku.png" alt="Hard">
+      <p id="hard-difficulty-label">Hard <br/> Sudoku</p>
+    </label>
   </div>
   <div class="win99-taskbar">
     <div class="win99-start-button">CSS Only Sudoku</div>

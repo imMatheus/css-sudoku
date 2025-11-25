@@ -3,25 +3,27 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Document
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet")
+    title CSS Only Sudoku
     link(rel="stylesheet", href="style.css")
   body
   input.game-difficulty-input(type="radio", id="game-difficulty-easy", name="game-difficulty")
   input.game-difficulty-input(type="radio", id="game-difficulty-medium", name="game-difficulty")
   input.game-difficulty-input(type="radio", id="game-difficulty-hard", name="game-difficulty")
-  .header 
-    h1 CSS only Sudoku
-    label.goBackButtonLabel(for="goBackButton") ← Go back
-    input.goBackButton(type="radio", id="goBackButton", name="game-difficulty")
-    ul.description-list 
-      li Knows when you have invalid numbers (in row, column or group)
-      li Shows when you have a valid board with a party animation
-  .difficulty-picker
-    p Choose a difficulty for your game
-    .difficulty-picker-labels
-      label.difficulty-picker-label(for="game-difficulty-easy") Easy
-      label.difficulty-picker-label(for="game-difficulty-medium") Medium
-      label.difficulty-picker-label(for="game-difficulty-hard") Hard
+  input.goBackButton(type="radio", id="goBackButton", name="game-difficulty")
+
+  .difficulty-picker-labels
+    label(for="game-difficulty-easy") 
+      img(src="sudoku.png", alt="Easy")
+      p(id="easy-difficulty-label") Easy <br/> Sudoku
+    label(for="game-difficulty-medium")
+      img(src="sudoku.png", alt="Medium")
+      p(id="medium-difficulty-label") Medium <br/> Sudoku
+    label(for="game-difficulty-hard") 
+      img(src="sudoku.png", alt="Hard")
+      p(id="hard-difficulty-label") Hard <br/> Sudoku
   .win99-taskbar
     .win99-start-button CSS Only Sudoku
     .win99-start-button-container
