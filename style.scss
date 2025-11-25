@@ -176,13 +176,13 @@ body {
 
     &:hover {
       #easy-difficulty-label {
-        background-color: oklch(62.7% 0.194 149.214);
+        background-color: hsl(130, 100%, 25%);
       }
       #medium-difficulty-label {
-        background-color: oklch(68.1% 0.162 75.834);
+        background-color: hsl(40, 100%, 25%);
       }
       #hard-difficulty-label {
-        background-color: oklch(57.7% 0.245 27.325);
+        background-color: hsl(10, 100%, 25%);
       }
     }
 
@@ -196,7 +196,7 @@ body {
       margin-top: -8px;
       padding: 2px 2px;
       width: 100%;
-      border-radius: 8px;
+      border-radius: 4cap;
       text-align: center;
       line-height: 1.2;
       transition: background-color 75ms ease-in-out;
