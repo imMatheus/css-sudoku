@@ -258,12 +258,18 @@ $squares-count: 9;
 .game-easy .board {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+
+  .square {
+    --square-font-size: 3.5rem;
+  }
 }
+
 .game-medium .board {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
 
   .square {
+    --square-font-size: 2.2rem;
     // second vertical row
     &:nth-child(6n-3) {
       border-right: 4px solid #000;
@@ -280,6 +286,7 @@ $squares-count: 9;
   grid-template-rows: repeat(9, 1fr);
 
   .square {
+    --square-font-size: 1.8rem;
     // Make inner crossing borders thicker
     // second vertical row
     &:nth-child(9n-6),
@@ -320,7 +327,7 @@ $squares-count: 9;
   border: 1px solid #000;
   position: relative;
   transition: background-color 150ms;
-
+  font-size: 10px;
   &[data-y='1'],
   &[data-y='2'] {
     .number_picker_sidebar {
@@ -337,7 +344,11 @@ $squares-count: 9;
   cursor: pointer;
 }
 .sidebar_toggle_input:checked + .sidebar_toggle_label {
-  border: solid 3px #a1a1aa;
+  border: solid 3px;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #dfdfdf;
+  border-bottom-color: #dfdfdf;
 }
 
 .sidebar_toggle_input {
@@ -366,7 +377,7 @@ $squares-count: 9;
   grid-template-columns: repeat(5, 1fr);
   transform: translate(-50%, -100%);
   display: none;
-  animation: sidebar-disappear 250ms;
+  animation: sidebar-disappear 50ms;
 }
 
 .number_picker_label {
@@ -385,7 +396,6 @@ $squares-count: 9;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 150ms ease-out;
 
   &:active {
     border-top-color: #808080;
@@ -424,7 +434,7 @@ $squares-count: 9;
       ~ .square[data-square-index='#{$i}']::before {
       content: '#{$j}';
       position: absolute;
-      font-size: 3rem;
+      font-size: var(--square-font-size);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
