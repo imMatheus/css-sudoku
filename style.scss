@@ -161,6 +161,8 @@ body {
   padding: 24px;
 
   label {
+    position: relative;
+    z-index: 1;
     // border: 2px solid #000;
     color: #fff;
     width: 80px;
@@ -231,6 +233,16 @@ body {
   margin-bottom: 1rem;
 }
 
+.close-sidebar-label {
+  position: fixed;
+  top: calc(50% - 14px);
+  left: 50%;
+  width: 100vw;
+  height: calc(100vh - 28px);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 $square-size: 70px;
 $squares-count: 9;
 
@@ -239,6 +251,8 @@ $squares-count: 9;
   display: grid;
   width: 100%;
   height: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .game-easy .board {
