@@ -1,10 +1,7 @@
-.pixelify-sans {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: "PixelFont";
+  src: url("./pixel-font.woff2") format("woff2");
 }
-
 *,
 *::before,
 *::after {
@@ -15,7 +12,7 @@
 
 body {
   min-height: 100vh;
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  font-family: "PixelFont", sans-serif;
   font-size: 11px;
   background-color: #008080;
 }
@@ -25,7 +22,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 28px;
+  height: 32px;
   background: #c0c0c0;
   border-top: 2px solid;
   border-top-color: #dfdfdf;
@@ -55,9 +52,11 @@ body {
   color: #000000;
   padding: 3px 8px;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 600;
   cursor: pointer;
   display: flex;
+  height: 100%;
   align-items: center;
   gap: 4px;
   transition: all 0.05s;
@@ -158,28 +157,18 @@ body {
   cursor: pointer;
   overflow: auto;
 }
-.difficulty-picker-labels label:hover #easy-difficulty-label {
-  background-color: hsl(130, 100%, 25%);
-}
-.difficulty-picker-labels label:hover #medium-difficulty-label {
-  background-color: hsl(40, 100%, 25%);
-}
-.difficulty-picker-labels label:hover #hard-difficulty-label {
-  background-color: hsl(10, 100%, 25%);
-}
 .difficulty-picker-labels label img {
   width: 76px;
   height: 76px;
 }
 .difficulty-picker-labels label p {
-  font-size: 12px;
-  font-weight: 600;
-  margin-top: -8px;
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: -12px;
   padding: 2px 2px;
   width: 100%;
   border-radius: 4cap;
   text-align: center;
-  line-height: 1.2;
   transition: background-color 75ms ease-in-out;
 }
 
@@ -216,7 +205,7 @@ body {
   top: calc(50% - 14px);
   left: 50%;
   width: 100vw;
-  height: calc(100vh - 28px);
+  height: calc(100vh - 32px);
   transform: translate(-50%, -50%);
   z-index: -1;
 }
