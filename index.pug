@@ -17,13 +17,13 @@ html(lang="en")
   .difficulty-picker-labels
     label(for="game-difficulty-easy") 
       img(src="sudoku.png", alt="Easy")
-      p(id="easy-difficulty-label") Easy <br/> Sudoku
+      p(id="easy-difficulty-label") Easy Sudoku
     label(for="game-difficulty-medium")
       img(src="sudoku.png", alt="Medium")
-      p(id="medium-difficulty-label") Medium <br/> Sudoku
+      p(id="medium-difficulty-label") Medium Sudoku
     label(for="game-difficulty-hard") 
       img(src="sudoku.png", alt="Hard")
-      p(id="hard-difficulty-label") Hard <br/> Sudoku
+      p(id="hard-difficulty-label") Hard Sudoku
   .win99-taskbar
     .win99-start-button CSS Only Sudoku
     .win99-start-button-container
@@ -54,24 +54,33 @@ html(lang="en")
       -   squares.push({ index: i + 1, group: group });
       - }
       each square in squares
+        - var preFilledSquares = [[1, 4], [2, 5], [4, 6], [6, 3], [7, 8]];
+        - var preFilledEntry = preFilledSquares.find(entry => entry[0] === square.index);
+        - var isPreFilled = preFilledEntry !== undefined;
+        - var defaultValue = isPreFilled ? preFilledEntry[1] : 0;
         each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
             input.number_picker_input(
                 type="radio", 
                 id=`board-easy-square-${square.index}-number-${num}`, 
                 name=`board-easy-square-${square.index}-numbers`, 
                 value=num
-                checked=num===0
+                disabled=(isPreFilled ? true : false)
+                checked=(isPreFilled ? num===defaultValue : num===0)
                 data-square-index=square.index
                 data-square-group=square.group
                 data-x=(square.index-1)%9+1
                 data-y=Math.ceil(square.index/9)
             )
         label.square(for=`board-easy-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
-          input.sidebar_toggle_input(type="radio", id=`board-easy-square-${square.index}`, name="select-square")
-          label.sidebar_toggle_label(for=`board-easy-square-${square.index}`)
-          .number_picker_sidebar
-            each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-              label.number_picker_label(for=`board-easy-square-${square.index}-number-${num}`)=num===0 ? "X" : num
+          if isPreFilled
+            div(style="position: absolute; bottom: 4px; right: 4px; width: 30px; height: 30px")
+              img(src='./lock.png', alt='Locked', style="width: 100%; height: 100%;")
+          else
+            input.sidebar_toggle_input(type="radio", id=`board-easy-square-${square.index}`, name="select-square")
+            label.sidebar_toggle_label(for=`board-easy-square-${square.index}`)
+            .number_picker_sidebar  
+              each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                label.number_picker_label(for=`board-easy-square-${square.index}-number-${num}`)=num===0 ? "X" : num
  
   .game-medium.win99-window
     label(for="medium-close-sidebar").close-sidebar-label
@@ -91,24 +100,33 @@ html(lang="en")
       -   squares.push({ index: i + 1, group: group });
       - }
       each square in squares
+        - var preFilledSquares = [[1, 9], [5, 4], [7, 6], [19, 7], [10, 8],[13, 3], [34, 8],[31, 4], [11, 2],[21, 3], [22, 1]];
+        - var preFilledEntry = preFilledSquares.find(entry => entry[0] === square.index);
+        - var isPreFilled = preFilledEntry !== undefined;
+        - var defaultValue = isPreFilled ? preFilledEntry[1] : 0;
         each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
             input.number_picker_input(
                 type="radio", 
                 id=`board-medium-square-${square.index}-number-${num}`, 
                 name=`board-medium-square-${square.index}-numbers`, 
                 value=num
-                checked=num===0
+                disabled=(isPreFilled ? true : false)
+                checked=(isPreFilled ? num===defaultValue : num===0)
                 data-square-index=square.index
                 data-square-group=square.group
                 data-x=(square.index-1)%6+1
                 data-y=Math.ceil(square.index/6)
             )
         label.square(for=`board-medium-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
-          input.sidebar_toggle_input(type="radio", id=`board-medium-square-${square.index}`, name="select-square")
-          label.sidebar_toggle_label(for=`board-medium-square-${square.index}`)
-          .number_picker_sidebar
-            each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-              label.number_picker_label(for=`board-medium-square-${square.index}-number-${num}`)=num===0 ? "X" : num
+          if isPreFilled
+            div(style="position: absolute; bottom: 3px; right: 3px; width: 24px; height: 24px")
+              img(src='./lock.png', alt='Locked', style="width: 100%; height: 100%;")
+          else
+            input.sidebar_toggle_input(type="radio", id=`board-medium-square-${square.index}`, name="select-square")
+            label.sidebar_toggle_label(for=`board-medium-square-${square.index}`)
+            .number_picker_sidebar
+              each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                label.number_picker_label(for=`board-medium-square-${square.index}-number-${num}`)=num===0 ? "X" : num
   
   .game-hard.win99-window
     label(for="hard-close-sidebar").close-sidebar-label
@@ -128,21 +146,30 @@ html(lang="en")
       -   squares.push({ index: i + 1, group: group });
       - }
       each square in squares
+        - var preFilledSquares = [[10, 6], [14, 3], [18, 4], [21, 2], [22, 5], [27, 8], [28, 3], [33, 5], [34, 8], [36, 7], [37, 7], [41, 1], [46, 8], [49, 2], [54, 6], [57, 6], [60, 1], [62, 4], [66, 9], [67, 4], [72, 5], [79, 1], [80, 7]];
+        - var preFilledEntry = preFilledSquares.find(entry => entry[0] === square.index);
+        - var isPreFilled = preFilledEntry !== undefined;
+        - var defaultValue = isPreFilled ? preFilledEntry[1] : 0;
         each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
             input.number_picker_input(
                 type="radio", 
                 id=`board-hard-square-${square.index}-number-${num}`, 
                 name=`board-hard-square-${square.index}-numbers`, 
                 value=num
-                checked=num===0
+                disabled=(isPreFilled ? true : false)
+                checked=(isPreFilled ? num===defaultValue : num===0)
                 data-square-index=square.index
                 data-square-group=square.group
                 data-x=(square.index-1)%9+1
                 data-y=Math.ceil(square.index/9)
             )
         label.square(for=`board-hard-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
-          input.sidebar_toggle_input(type="radio", id=`board-hard-square-${square.index}`, name="select-square")
-          label.sidebar_toggle_label(for=`board-hard-square-${square.index}`)
-          .number_picker_sidebar
-            each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-              label.number_picker_label(for=`board-hard-square-${square.index}-number-${num}`)=num===0 ? "X" : num
+          if isPreFilled
+            div(style="position: absolute; bottom: 2px; right: 2px; width: 17px; height: 17px")
+              img(src='./lock.png', alt='Locked', style="width: 100%; height: 100%;")
+          else
+            input.sidebar_toggle_input(type="radio", id=`board-hard-square-${square.index}`, name="select-square")
+            label.sidebar_toggle_label(for=`board-hard-square-${square.index}`)
+            .number_picker_sidebar
+              each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                label.number_picker_label(for=`board-hard-square-${square.index}-number-${num}`)=num===0 ? "X" : num

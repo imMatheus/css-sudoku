@@ -165,11 +165,22 @@ body {
   font-size: 10px;
   font-weight: 400;
   margin-top: -12px;
-  padding: 2px 2px;
+  padding: 1px;
   width: 100%;
-  border-radius: 4cap;
+  border: solid 1px transparent;
   text-align: center;
-  transition: background-color 75ms ease-in-out;
+}
+
+.game-difficulty-input[id=game-difficulty-easy]:checked ~ .difficulty-picker-labels label[for=game-difficulty-easy] img,
+.game-difficulty-input[id=game-difficulty-medium]:checked ~ .difficulty-picker-labels label[for=game-difficulty-medium] img,
+.game-difficulty-input[id=game-difficulty-hard]:checked ~ .difficulty-picker-labels label[for=game-difficulty-hard] img {
+  filter: brightness(0.4) contrast(0.8) sepia(100%) hue-rotate(185deg) saturate(4);
+}
+.game-difficulty-input[id=game-difficulty-easy]:checked ~ .difficulty-picker-labels label[for=game-difficulty-easy] p,
+.game-difficulty-input[id=game-difficulty-medium]:checked ~ .difficulty-picker-labels label[for=game-difficulty-medium] p,
+.game-difficulty-input[id=game-difficulty-hard]:checked ~ .difficulty-picker-labels label[for=game-difficulty-hard] p {
+  border: dotted 1px #fff;
+  background-color: rgb(0, 0, 128);
 }
 
 .game-easy,
