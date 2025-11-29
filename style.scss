@@ -430,16 +430,18 @@ $squares-count: 9;
   }
 }
 
-@for $i from 1 through $squares-count * $squares-count {
-  @for $j from 1 through $squares-count {
-    .number_picker_input[data-square-index='#{$i}'][value='#{$j}']:checked
-      ~ .square[data-square-index='#{$i}']::before {
-      content: '#{$j}';
-      position: absolute;
-      font-size: var(--square-font-size);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+.board {
+  @for $i from 1 through $squares-count * $squares-count {
+    @for $j from 1 through $squares-count {
+      .number_picker_input[data-square-index='#{$i}'][value='#{$j}']:checked
+        ~ .square[data-square-index='#{$i}']::before {
+        content: '#{$j}';
+        position: absolute;
+        font-size: var(--square-font-size);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
@@ -455,21 +457,21 @@ $squares-count: 9;
 @for $i from 1 through $squares-count {
   @for $value from 1 through $squares-count {
     // Check for same value in the same group
-    body:has(
+    .board:has(
       .number_picker_input[value='#{$value}'][data-square-group='#{$i}']:checked
       ~ .number_picker_input[value='#{$value}'][data-square-group='#{$i}']:checked
     )
     .square[data-square-group='#{$i}'],
 
     // Check for same value on row
-    body:has(
+    .board:has(
       .number_picker_input[value='#{$value}'][data-y='#{$i}']:checked
       ~ .number_picker_input[value='#{$value}'][data-y='#{$i}']:checked
     )
     .square[data-y='#{$i}'],
 
     // Check for same value on column
-    body:has(
+    .board:has(
       .number_picker_input[value='#{$value}'][data-x='#{$i}']:checked
       ~ .number_picker_input[value='#{$value}'][data-x='#{$i}']:checked
     )
@@ -481,38 +483,40 @@ $squares-count: 9;
 
 $winningSelector: '';
 
-@for $i from 1 through $squares-count {
-  @for $value from 1 through $squares-count {
-    $winningSelector: #{$winningSelector} +
-      ":not(:has(.number_picker_input[value='" +
-      $value +
-      "'][data-square-group='" +
-      $i +
-      "']:checked ~ .number_picker_input[value='" +
-      $value +
-      "'][data-square-group='" +
-      $i +
-      "']:checked))";
-    $winningSelector: #{$winningSelector} +
-      ":not(:has(.number_picker_input[value='" +
-      $value +
-      "'][data-x='" +
-      $i +
-      "']:checked ~ .number_picker_input[value='" +
-      $value +
-      "'][data-x='" +
-      $i +
-      "']:checked))";
-    $winningSelector: #{$winningSelector} +
-      ":not(:has(.number_picker_input[value='" +
-      $value +
-      "'][data-y='" +
-      $i +
-      "']:checked ~ .number_picker_input[value='" +
-      $value +
-      "'][data-y='" +
-      $i +
-      "']:checked))";
+.board {
+  @for $i from 1 through $squares-count {
+    @for $value from 1 through $squares-count {
+      $winningSelector: #{$winningSelector} +
+        ":not(:has(.number_picker_input[value='" +
+        $value +
+        "'][data-square-group='" +
+        $i +
+        "']:checked ~ .number_picker_input[value='" +
+        $value +
+        "'][data-square-group='" +
+        $i +
+        "']:checked))";
+      $winningSelector: #{$winningSelector} +
+        ":not(:has(.number_picker_input[value='" +
+        $value +
+        "'][data-x='" +
+        $i +
+        "']:checked ~ .number_picker_input[value='" +
+        $value +
+        "'][data-x='" +
+        $i +
+        "']:checked))";
+      $winningSelector: #{$winningSelector} +
+        ":not(:has(.number_picker_input[value='" +
+        $value +
+        "'][data-y='" +
+        $i +
+        "']:checked ~ .number_picker_input[value='" +
+        $value +
+        "'][data-y='" +
+        $i +
+        "']:checked))";
+    }
   }
 }
 
