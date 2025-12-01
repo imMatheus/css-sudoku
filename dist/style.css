@@ -22,8 +22,8 @@ body {
   z-index: 1000;
   color: #fff;
   background-color: #f00;
-  animation: loading-screen-close 1.2s forwards;
-  animation-delay: 3s;
+  animation: loading-screen-close 1.1s forwards;
+  animation-delay: 2.8s;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -6314,487 +6314,487 @@ body {
 .board:has(.number_picker_input[value="1"][data-square-group="1"]:checked ~ .number_picker_input[value="1"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="1"][data-y="1"]:checked ~ .number_picker_input[value="1"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="1"][data-x="1"]:checked ~ .number_picker_input[value="1"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="1"]:checked ~ .number_picker_input[value="2"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="2"][data-y="1"]:checked ~ .number_picker_input[value="2"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="2"][data-x="1"]:checked ~ .number_picker_input[value="2"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="1"]:checked ~ .number_picker_input[value="3"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="3"][data-y="1"]:checked ~ .number_picker_input[value="3"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="3"][data-x="1"]:checked ~ .number_picker_input[value="3"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="1"]:checked ~ .number_picker_input[value="4"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="4"][data-y="1"]:checked ~ .number_picker_input[value="4"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="4"][data-x="1"]:checked ~ .number_picker_input[value="4"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="1"]:checked ~ .number_picker_input[value="5"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="5"][data-y="1"]:checked ~ .number_picker_input[value="5"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="5"][data-x="1"]:checked ~ .number_picker_input[value="5"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="1"]:checked ~ .number_picker_input[value="6"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="6"][data-y="1"]:checked ~ .number_picker_input[value="6"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="6"][data-x="1"]:checked ~ .number_picker_input[value="6"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="1"]:checked ~ .number_picker_input[value="7"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="7"][data-y="1"]:checked ~ .number_picker_input[value="7"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="7"][data-x="1"]:checked ~ .number_picker_input[value="7"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="1"]:checked ~ .number_picker_input[value="8"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="8"][data-y="1"]:checked ~ .number_picker_input[value="8"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="8"][data-x="1"]:checked ~ .number_picker_input[value="8"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="1"]:checked ~ .number_picker_input[value="9"][data-square-group="1"]:checked) .square[data-square-group="1"],
 .board:has(.number_picker_input[value="9"][data-y="1"]:checked ~ .number_picker_input[value="9"][data-y="1"]:checked) .square[data-y="1"],
 .board:has(.number_picker_input[value="9"][data-x="1"]:checked ~ .number_picker_input[value="9"][data-x="1"]:checked) .square[data-x="1"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="2"]:checked ~ .number_picker_input[value="1"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="1"][data-y="2"]:checked ~ .number_picker_input[value="1"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="1"][data-x="2"]:checked ~ .number_picker_input[value="1"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="2"]:checked ~ .number_picker_input[value="2"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="2"][data-y="2"]:checked ~ .number_picker_input[value="2"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="2"][data-x="2"]:checked ~ .number_picker_input[value="2"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="2"]:checked ~ .number_picker_input[value="3"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="3"][data-y="2"]:checked ~ .number_picker_input[value="3"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="3"][data-x="2"]:checked ~ .number_picker_input[value="3"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="2"]:checked ~ .number_picker_input[value="4"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="4"][data-y="2"]:checked ~ .number_picker_input[value="4"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="4"][data-x="2"]:checked ~ .number_picker_input[value="4"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="2"]:checked ~ .number_picker_input[value="5"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="5"][data-y="2"]:checked ~ .number_picker_input[value="5"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="5"][data-x="2"]:checked ~ .number_picker_input[value="5"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="2"]:checked ~ .number_picker_input[value="6"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="6"][data-y="2"]:checked ~ .number_picker_input[value="6"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="6"][data-x="2"]:checked ~ .number_picker_input[value="6"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="2"]:checked ~ .number_picker_input[value="7"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="7"][data-y="2"]:checked ~ .number_picker_input[value="7"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="7"][data-x="2"]:checked ~ .number_picker_input[value="7"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="2"]:checked ~ .number_picker_input[value="8"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="8"][data-y="2"]:checked ~ .number_picker_input[value="8"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="8"][data-x="2"]:checked ~ .number_picker_input[value="8"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="2"]:checked ~ .number_picker_input[value="9"][data-square-group="2"]:checked) .square[data-square-group="2"],
 .board:has(.number_picker_input[value="9"][data-y="2"]:checked ~ .number_picker_input[value="9"][data-y="2"]:checked) .square[data-y="2"],
 .board:has(.number_picker_input[value="9"][data-x="2"]:checked ~ .number_picker_input[value="9"][data-x="2"]:checked) .square[data-x="2"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="3"]:checked ~ .number_picker_input[value="1"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="1"][data-y="3"]:checked ~ .number_picker_input[value="1"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="1"][data-x="3"]:checked ~ .number_picker_input[value="1"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="3"]:checked ~ .number_picker_input[value="2"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="2"][data-y="3"]:checked ~ .number_picker_input[value="2"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="2"][data-x="3"]:checked ~ .number_picker_input[value="2"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="3"]:checked ~ .number_picker_input[value="3"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="3"][data-y="3"]:checked ~ .number_picker_input[value="3"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="3"][data-x="3"]:checked ~ .number_picker_input[value="3"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="3"]:checked ~ .number_picker_input[value="4"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="4"][data-y="3"]:checked ~ .number_picker_input[value="4"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="4"][data-x="3"]:checked ~ .number_picker_input[value="4"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="3"]:checked ~ .number_picker_input[value="5"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="5"][data-y="3"]:checked ~ .number_picker_input[value="5"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="5"][data-x="3"]:checked ~ .number_picker_input[value="5"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="3"]:checked ~ .number_picker_input[value="6"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="6"][data-y="3"]:checked ~ .number_picker_input[value="6"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="6"][data-x="3"]:checked ~ .number_picker_input[value="6"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="3"]:checked ~ .number_picker_input[value="7"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="7"][data-y="3"]:checked ~ .number_picker_input[value="7"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="7"][data-x="3"]:checked ~ .number_picker_input[value="7"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="3"]:checked ~ .number_picker_input[value="8"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="8"][data-y="3"]:checked ~ .number_picker_input[value="8"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="8"][data-x="3"]:checked ~ .number_picker_input[value="8"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="3"]:checked ~ .number_picker_input[value="9"][data-square-group="3"]:checked) .square[data-square-group="3"],
 .board:has(.number_picker_input[value="9"][data-y="3"]:checked ~ .number_picker_input[value="9"][data-y="3"]:checked) .square[data-y="3"],
 .board:has(.number_picker_input[value="9"][data-x="3"]:checked ~ .number_picker_input[value="9"][data-x="3"]:checked) .square[data-x="3"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="4"]:checked ~ .number_picker_input[value="1"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="1"][data-y="4"]:checked ~ .number_picker_input[value="1"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="1"][data-x="4"]:checked ~ .number_picker_input[value="1"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="4"]:checked ~ .number_picker_input[value="2"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="2"][data-y="4"]:checked ~ .number_picker_input[value="2"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="2"][data-x="4"]:checked ~ .number_picker_input[value="2"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="4"]:checked ~ .number_picker_input[value="3"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="3"][data-y="4"]:checked ~ .number_picker_input[value="3"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="3"][data-x="4"]:checked ~ .number_picker_input[value="3"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="4"]:checked ~ .number_picker_input[value="4"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="4"][data-y="4"]:checked ~ .number_picker_input[value="4"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="4"][data-x="4"]:checked ~ .number_picker_input[value="4"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="4"]:checked ~ .number_picker_input[value="5"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="5"][data-y="4"]:checked ~ .number_picker_input[value="5"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="5"][data-x="4"]:checked ~ .number_picker_input[value="5"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="4"]:checked ~ .number_picker_input[value="6"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="6"][data-y="4"]:checked ~ .number_picker_input[value="6"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="6"][data-x="4"]:checked ~ .number_picker_input[value="6"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="4"]:checked ~ .number_picker_input[value="7"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="7"][data-y="4"]:checked ~ .number_picker_input[value="7"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="7"][data-x="4"]:checked ~ .number_picker_input[value="7"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="4"]:checked ~ .number_picker_input[value="8"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="8"][data-y="4"]:checked ~ .number_picker_input[value="8"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="8"][data-x="4"]:checked ~ .number_picker_input[value="8"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="4"]:checked ~ .number_picker_input[value="9"][data-square-group="4"]:checked) .square[data-square-group="4"],
 .board:has(.number_picker_input[value="9"][data-y="4"]:checked ~ .number_picker_input[value="9"][data-y="4"]:checked) .square[data-y="4"],
 .board:has(.number_picker_input[value="9"][data-x="4"]:checked ~ .number_picker_input[value="9"][data-x="4"]:checked) .square[data-x="4"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="5"]:checked ~ .number_picker_input[value="1"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="1"][data-y="5"]:checked ~ .number_picker_input[value="1"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="1"][data-x="5"]:checked ~ .number_picker_input[value="1"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="5"]:checked ~ .number_picker_input[value="2"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="2"][data-y="5"]:checked ~ .number_picker_input[value="2"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="2"][data-x="5"]:checked ~ .number_picker_input[value="2"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="5"]:checked ~ .number_picker_input[value="3"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="3"][data-y="5"]:checked ~ .number_picker_input[value="3"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="3"][data-x="5"]:checked ~ .number_picker_input[value="3"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="5"]:checked ~ .number_picker_input[value="4"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="4"][data-y="5"]:checked ~ .number_picker_input[value="4"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="4"][data-x="5"]:checked ~ .number_picker_input[value="4"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="5"]:checked ~ .number_picker_input[value="5"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="5"][data-y="5"]:checked ~ .number_picker_input[value="5"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="5"][data-x="5"]:checked ~ .number_picker_input[value="5"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="5"]:checked ~ .number_picker_input[value="6"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="6"][data-y="5"]:checked ~ .number_picker_input[value="6"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="6"][data-x="5"]:checked ~ .number_picker_input[value="6"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="5"]:checked ~ .number_picker_input[value="7"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="7"][data-y="5"]:checked ~ .number_picker_input[value="7"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="7"][data-x="5"]:checked ~ .number_picker_input[value="7"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="5"]:checked ~ .number_picker_input[value="8"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="8"][data-y="5"]:checked ~ .number_picker_input[value="8"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="8"][data-x="5"]:checked ~ .number_picker_input[value="8"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="5"]:checked ~ .number_picker_input[value="9"][data-square-group="5"]:checked) .square[data-square-group="5"],
 .board:has(.number_picker_input[value="9"][data-y="5"]:checked ~ .number_picker_input[value="9"][data-y="5"]:checked) .square[data-y="5"],
 .board:has(.number_picker_input[value="9"][data-x="5"]:checked ~ .number_picker_input[value="9"][data-x="5"]:checked) .square[data-x="5"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="6"]:checked ~ .number_picker_input[value="1"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="1"][data-y="6"]:checked ~ .number_picker_input[value="1"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="1"][data-x="6"]:checked ~ .number_picker_input[value="1"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="6"]:checked ~ .number_picker_input[value="2"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="2"][data-y="6"]:checked ~ .number_picker_input[value="2"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="2"][data-x="6"]:checked ~ .number_picker_input[value="2"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="6"]:checked ~ .number_picker_input[value="3"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="3"][data-y="6"]:checked ~ .number_picker_input[value="3"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="3"][data-x="6"]:checked ~ .number_picker_input[value="3"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="6"]:checked ~ .number_picker_input[value="4"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="4"][data-y="6"]:checked ~ .number_picker_input[value="4"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="4"][data-x="6"]:checked ~ .number_picker_input[value="4"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="6"]:checked ~ .number_picker_input[value="5"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="5"][data-y="6"]:checked ~ .number_picker_input[value="5"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="5"][data-x="6"]:checked ~ .number_picker_input[value="5"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="6"]:checked ~ .number_picker_input[value="6"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="6"][data-y="6"]:checked ~ .number_picker_input[value="6"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="6"][data-x="6"]:checked ~ .number_picker_input[value="6"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="6"]:checked ~ .number_picker_input[value="7"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="7"][data-y="6"]:checked ~ .number_picker_input[value="7"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="7"][data-x="6"]:checked ~ .number_picker_input[value="7"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="6"]:checked ~ .number_picker_input[value="8"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="8"][data-y="6"]:checked ~ .number_picker_input[value="8"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="8"][data-x="6"]:checked ~ .number_picker_input[value="8"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="6"]:checked ~ .number_picker_input[value="9"][data-square-group="6"]:checked) .square[data-square-group="6"],
 .board:has(.number_picker_input[value="9"][data-y="6"]:checked ~ .number_picker_input[value="9"][data-y="6"]:checked) .square[data-y="6"],
 .board:has(.number_picker_input[value="9"][data-x="6"]:checked ~ .number_picker_input[value="9"][data-x="6"]:checked) .square[data-x="6"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="7"]:checked ~ .number_picker_input[value="1"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="1"][data-y="7"]:checked ~ .number_picker_input[value="1"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="1"][data-x="7"]:checked ~ .number_picker_input[value="1"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="7"]:checked ~ .number_picker_input[value="2"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="2"][data-y="7"]:checked ~ .number_picker_input[value="2"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="2"][data-x="7"]:checked ~ .number_picker_input[value="2"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="7"]:checked ~ .number_picker_input[value="3"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="3"][data-y="7"]:checked ~ .number_picker_input[value="3"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="3"][data-x="7"]:checked ~ .number_picker_input[value="3"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="7"]:checked ~ .number_picker_input[value="4"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="4"][data-y="7"]:checked ~ .number_picker_input[value="4"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="4"][data-x="7"]:checked ~ .number_picker_input[value="4"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="7"]:checked ~ .number_picker_input[value="5"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="5"][data-y="7"]:checked ~ .number_picker_input[value="5"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="5"][data-x="7"]:checked ~ .number_picker_input[value="5"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="7"]:checked ~ .number_picker_input[value="6"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="6"][data-y="7"]:checked ~ .number_picker_input[value="6"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="6"][data-x="7"]:checked ~ .number_picker_input[value="6"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="7"]:checked ~ .number_picker_input[value="7"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="7"][data-y="7"]:checked ~ .number_picker_input[value="7"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="7"][data-x="7"]:checked ~ .number_picker_input[value="7"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="7"]:checked ~ .number_picker_input[value="8"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="8"][data-y="7"]:checked ~ .number_picker_input[value="8"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="8"][data-x="7"]:checked ~ .number_picker_input[value="8"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="7"]:checked ~ .number_picker_input[value="9"][data-square-group="7"]:checked) .square[data-square-group="7"],
 .board:has(.number_picker_input[value="9"][data-y="7"]:checked ~ .number_picker_input[value="9"][data-y="7"]:checked) .square[data-y="7"],
 .board:has(.number_picker_input[value="9"][data-x="7"]:checked ~ .number_picker_input[value="9"][data-x="7"]:checked) .square[data-x="7"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="8"]:checked ~ .number_picker_input[value="1"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="1"][data-y="8"]:checked ~ .number_picker_input[value="1"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="1"][data-x="8"]:checked ~ .number_picker_input[value="1"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="8"]:checked ~ .number_picker_input[value="2"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="2"][data-y="8"]:checked ~ .number_picker_input[value="2"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="2"][data-x="8"]:checked ~ .number_picker_input[value="2"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="8"]:checked ~ .number_picker_input[value="3"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="3"][data-y="8"]:checked ~ .number_picker_input[value="3"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="3"][data-x="8"]:checked ~ .number_picker_input[value="3"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="8"]:checked ~ .number_picker_input[value="4"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="4"][data-y="8"]:checked ~ .number_picker_input[value="4"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="4"][data-x="8"]:checked ~ .number_picker_input[value="4"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="8"]:checked ~ .number_picker_input[value="5"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="5"][data-y="8"]:checked ~ .number_picker_input[value="5"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="5"][data-x="8"]:checked ~ .number_picker_input[value="5"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="8"]:checked ~ .number_picker_input[value="6"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="6"][data-y="8"]:checked ~ .number_picker_input[value="6"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="6"][data-x="8"]:checked ~ .number_picker_input[value="6"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="8"]:checked ~ .number_picker_input[value="7"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="7"][data-y="8"]:checked ~ .number_picker_input[value="7"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="7"][data-x="8"]:checked ~ .number_picker_input[value="7"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="8"]:checked ~ .number_picker_input[value="8"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="8"][data-y="8"]:checked ~ .number_picker_input[value="8"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="8"][data-x="8"]:checked ~ .number_picker_input[value="8"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="8"]:checked ~ .number_picker_input[value="9"][data-square-group="8"]:checked) .square[data-square-group="8"],
 .board:has(.number_picker_input[value="9"][data-y="8"]:checked ~ .number_picker_input[value="9"][data-y="8"]:checked) .square[data-y="8"],
 .board:has(.number_picker_input[value="9"][data-x="8"]:checked ~ .number_picker_input[value="9"][data-x="8"]:checked) .square[data-x="8"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="1"][data-square-group="9"]:checked ~ .number_picker_input[value="1"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="1"][data-y="9"]:checked ~ .number_picker_input[value="1"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="1"][data-x="9"]:checked ~ .number_picker_input[value="1"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="2"][data-square-group="9"]:checked ~ .number_picker_input[value="2"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="2"][data-y="9"]:checked ~ .number_picker_input[value="2"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="2"][data-x="9"]:checked ~ .number_picker_input[value="2"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="3"][data-square-group="9"]:checked ~ .number_picker_input[value="3"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="3"][data-y="9"]:checked ~ .number_picker_input[value="3"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="3"][data-x="9"]:checked ~ .number_picker_input[value="3"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="4"][data-square-group="9"]:checked ~ .number_picker_input[value="4"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="4"][data-y="9"]:checked ~ .number_picker_input[value="4"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="4"][data-x="9"]:checked ~ .number_picker_input[value="4"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="5"][data-square-group="9"]:checked ~ .number_picker_input[value="5"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="5"][data-y="9"]:checked ~ .number_picker_input[value="5"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="5"][data-x="9"]:checked ~ .number_picker_input[value="5"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="6"][data-square-group="9"]:checked ~ .number_picker_input[value="6"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="6"][data-y="9"]:checked ~ .number_picker_input[value="6"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="6"][data-x="9"]:checked ~ .number_picker_input[value="6"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="7"][data-square-group="9"]:checked ~ .number_picker_input[value="7"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="7"][data-y="9"]:checked ~ .number_picker_input[value="7"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="7"][data-x="9"]:checked ~ .number_picker_input[value="7"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="8"][data-square-group="9"]:checked ~ .number_picker_input[value="8"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="8"][data-y="9"]:checked ~ .number_picker_input[value="8"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="8"][data-x="9"]:checked ~ .number_picker_input[value="8"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 .board:has(.number_picker_input[value="9"][data-square-group="9"]:checked ~ .number_picker_input[value="9"][data-square-group="9"]:checked) .square[data-square-group="9"],
 .board:has(.number_picker_input[value="9"][data-y="9"]:checked ~ .number_picker_input[value="9"][data-y="9"]:checked) .square[data-y="9"],
 .board:has(.number_picker_input[value="9"][data-x="9"]:checked ~ .number_picker_input[value="9"][data-x="9"]:checked) .square[data-x="9"] {
-  background: rgb(236, 31, 31);
+  background: hsl(20, 100%, 25%);
 }
 
 body:not(:has(.number_picker_input[value="0"]:checked)) .icon {

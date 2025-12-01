@@ -30,8 +30,8 @@ body {
   z-index: 1000;
   color: #fff;
   background-color: #f00;
-  animation: loading-screen-close 1.2s forwards;
-  animation-delay: 3s;
+  animation: loading-screen-close 1.1s forwards;
+  animation-delay: 2.8s;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -564,7 +564,7 @@ $squares-count: 9;
       ~ .number_picker_input[value='#{$value}'][data-x='#{$i}']:checked
     )
     .square[data-x='#{$i}'] {
-      background: rgb(236, 31, 31);
+      background: hsl(20, 100%, 25%);
     }
   }
 }
