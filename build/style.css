@@ -1,6 +1,6 @@
 @font-face {
   font-family: "PixelFont";
-  src: url("../pixel-font.woff2") format("woff2");
+  src: url("./pixel-font.woff2") format("woff2");
 }
 *,
 *::before,
