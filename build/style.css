@@ -344,31 +344,39 @@ body {
   --square-font-size: 3.5rem;
 }
 
-.game-medium .board {
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-}
-.game-medium .board .square {
-  --square-font-size: 2.2rem;
-}
-.game-medium .board .square:nth-child(6n-3) {
-  border-right: 4px solid #000;
-}
-.game-medium .board .square:nth-of-type(n + 13):nth-of-type(-n + 18) {
-  border-bottom: 4px solid #000;
-}
-
+.game-medium .board,
 .game-hard .board {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 1fr);
 }
+.game-medium .board .square,
 .game-hard .board .square {
   --square-font-size: 1.8rem;
 }
-.game-hard .board .square:nth-child(9n-6), .game-hard .board .square:nth-child(9n-3) {
+.game-medium .board .square:nth-child(9n-6), .game-medium .board .square:nth-child(9n-3),
+.game-hard .board .square:nth-child(9n-6),
+.game-hard .board .square:nth-child(9n-3) {
   border-right: 4px solid #000;
 }
-.game-hard .board .square:nth-of-type(19), .game-hard .board .square:nth-of-type(20), .game-hard .board .square:nth-of-type(21), .game-hard .board .square:nth-of-type(22), .game-hard .board .square:nth-of-type(23), .game-hard .board .square:nth-of-type(24), .game-hard .board .square:nth-of-type(25), .game-hard .board .square:nth-of-type(26), .game-hard .board .square:nth-of-type(27), .game-hard .board .square:nth-of-type(46), .game-hard .board .square:nth-of-type(47), .game-hard .board .square:nth-of-type(48), .game-hard .board .square:nth-of-type(49), .game-hard .board .square:nth-of-type(50), .game-hard .board .square:nth-of-type(51), .game-hard .board .square:nth-of-type(52), .game-hard .board .square:nth-of-type(53), .game-hard .board .square:nth-of-type(54) {
+.game-medium .board .square:nth-of-type(19), .game-medium .board .square:nth-of-type(20), .game-medium .board .square:nth-of-type(21), .game-medium .board .square:nth-of-type(22), .game-medium .board .square:nth-of-type(23), .game-medium .board .square:nth-of-type(24), .game-medium .board .square:nth-of-type(25), .game-medium .board .square:nth-of-type(26), .game-medium .board .square:nth-of-type(27), .game-medium .board .square:nth-of-type(46), .game-medium .board .square:nth-of-type(47), .game-medium .board .square:nth-of-type(48), .game-medium .board .square:nth-of-type(49), .game-medium .board .square:nth-of-type(50), .game-medium .board .square:nth-of-type(51), .game-medium .board .square:nth-of-type(52), .game-medium .board .square:nth-of-type(53), .game-medium .board .square:nth-of-type(54),
+.game-hard .board .square:nth-of-type(19),
+.game-hard .board .square:nth-of-type(20),
+.game-hard .board .square:nth-of-type(21),
+.game-hard .board .square:nth-of-type(22),
+.game-hard .board .square:nth-of-type(23),
+.game-hard .board .square:nth-of-type(24),
+.game-hard .board .square:nth-of-type(25),
+.game-hard .board .square:nth-of-type(26),
+.game-hard .board .square:nth-of-type(27),
+.game-hard .board .square:nth-of-type(46),
+.game-hard .board .square:nth-of-type(47),
+.game-hard .board .square:nth-of-type(48),
+.game-hard .board .square:nth-of-type(49),
+.game-hard .board .square:nth-of-type(50),
+.game-hard .board .square:nth-of-type(51),
+.game-hard .board .square:nth-of-type(52),
+.game-hard .board .square:nth-of-type(53),
+.game-hard .board .square:nth-of-type(54) {
   border-bottom: 4px solid #000;
 }
 

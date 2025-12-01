@@ -353,23 +353,7 @@ $squares-count: 9;
   }
 }
 
-.game-medium .board {
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-
-  .square {
-    --square-font-size: 2.2rem;
-    // second vertical row
-    &:nth-child(6n-3) {
-      border-right: 4px solid #000;
-    }
-
-    // horizontal rows
-    &:nth-of-type(n + 13):nth-of-type(-n + 18) {
-      border-bottom: 4px solid #000;
-    }
-  }
-}
+.game-medium .board,
 .game-hard .board {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 1fr);
