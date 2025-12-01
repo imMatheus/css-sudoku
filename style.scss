@@ -25,6 +25,85 @@ body {
   // background: linear-gradient(135deg, #008080 0%, #1084d7 100%);
 }
 
+.loading-screen {
+  position: fixed;
+  z-index: 1000;
+  color: #fff;
+  background-color: #f00;
+  animation: loading-screen-close 1.2s forwards;
+  animation-delay: 3s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@keyframes loading-screen-close {
+  from {
+    height: 100vh;
+    width: 100vw;
+  }
+  to {
+    height: 0vh;
+    width: 0vw;
+  }
+}
+
+.loading-screen-inner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loading-screen-loader {
+  height: 45px;
+  width: 350px;
+  display: flex;
+  gap: 1px;
+  background: #c0c0c0;
+  border-top: 2px solid;
+  border-top-color: #dfdfdf;
+  border-bottom: 2px solid;
+  border-bottom-color: #808080;
+  box-shadow: inset 0 1px 0 #ffffff, inset 0 -1px 0 #000080;
+  padding: 2px 4px;
+
+  .bar {
+    height: 100%;
+    width: 100%;
+    background-color: #122b7c;
+    opacity: 0;
+    animation: loading-screen-loader-bar-animation 1ms forwards;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{($i - 1) * 200}ms;
+      }
+    }
+  }
+}
+
+@keyframes loading-screen-loader-bar-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 $taskbar-height: 32px;
 
 .win99-taskbar {
