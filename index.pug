@@ -10,12 +10,12 @@ html(lang="en")
   input.game-difficulty-input(type="radio", id="game-difficulty-medium", name="game-difficulty")
   input.game-difficulty-input(type="radio", id="game-difficulty-hard", name="game-difficulty")
   input.goBackButton(type="radio", id="goBackButton", name="game-difficulty")
-  //- .loading-screen
-  //-   .loading-screen-inner
-  //-     p Loading...
-  //-     .loading-screen-loader
-  //-       - for (let i = 0; i < 12; i++)
-  //-         .bar
+  .loading-screen
+    .loading-screen-inner
+      p Loading...
+      .loading-screen-loader
+        - for (let i = 0; i < 12; i++)
+          .bar
 
   .difficulty-picker-labels
     label(for="game-difficulty-easy") 
@@ -47,6 +47,16 @@ html(lang="en")
       label.win99-button(for="goBackButton") ×
     input.close-sidebar(type="radio", id="easy-close-sidebar", name="select-square")
     .board
+      .winner-message
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        p Completed!
       - var gridSize = 3 // Change this to adjust the grid size (e.g., 4, 9, 16, 25)
       - var blockSize = Math.sqrt(gridSize); // Size of each block/group
       - var squares = [];
@@ -93,6 +103,16 @@ html(lang="en")
       label.win99-button(for="goBackButton") ×
     input.close-sidebar(type="radio", id="medium-close-sidebar", name="select-square")
     .board
+      .winner-message
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        p Completed!
       - var gridSize = 9 // Change this to adjust the grid size (e.g., 4, 9, 16, 25)
       - var blockSize = Math.sqrt(gridSize); // Size of each block/group
       - var squares = [];
@@ -103,7 +123,7 @@ html(lang="en")
       -   squares.push({ index: i + 1, group: group });
       - }
       each square in squares
-        - var preFilledSquares = [[1, 9], [5, 4], [7, 6], [19, 7], [10, 8],[13, 3], [29, 3], [34, 9],[31, 4], [11, 2],[21, 3], [22, 1]];
+        - var preFilledSquares = [[1, 6], [2, 5], [6, 7], [7, 9], [9, 3], [12, 2], [13, 1], [16, 6], [19, 9], [23, 6], [24, 3], [27, 4], [28, 1], [29, 2], [30, 9], [37, 3], [39, 4], [40, 9], [42, 8], [43, 1], [49, 3], [52, 4], [53, 7], [54, 9], [57, 6], [59, 8], [61, 3], [63, 5], [64, 7], [65, 4], [67, 5], [72, 1], [73, 5],[74, 8],[75, 1], [76, 4], [80, 2], [81, 6]];
         - var preFilledEntry = preFilledSquares.find(entry => entry[0] === square.index);
         - var isPreFilled = preFilledEntry !== undefined;
         - var defaultValue = isPreFilled ? preFilledEntry[1] : 0;
@@ -139,6 +159,16 @@ html(lang="en")
       label.win99-button(for="goBackButton") ×
     input.close-sidebar(type="radio", id="hard-close-sidebar", name="select-square")
     .board
+      .winner-message
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        img.confetti(src="./img/confetti.png", alt="Confetti")
+        p Completed!
       - var gridSize = 9 // Change this to adjust the grid size (e.g., 4, 9, 16, 25)
       - var blockSize = Math.sqrt(gridSize); // Size of each block/group
       - var squares = [];
