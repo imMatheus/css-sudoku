@@ -367,11 +367,6 @@ $squares-count: 9;
       border-right: 4px solid #000;
     }
 
-    // &:nth-of-type(n + 7):nth-of-type(-n + 17),
-    // &:nth-of-type(n + 28):nth-of-type(-n + 36) {
-    //   border-bottom: 4px solid #000;
-    // }
-
     // horizontal rows
     &:nth-of-type(19),
     &:nth-of-type(20),
@@ -555,40 +550,38 @@ $squares-count: 9;
 
 $winningSelector: '';
 
-.board {
-  @for $i from 1 through $squares-count {
-    @for $value from 1 through $squares-count {
-      $winningSelector: #{$winningSelector} +
-        ":not(:has(.number_picker_input[value='" +
-        $value +
-        "'][data-square-group='" +
-        $i +
-        "']:checked ~ .number_picker_input[value='" +
-        $value +
-        "'][data-square-group='" +
-        $i +
-        "']:checked))";
-      $winningSelector: #{$winningSelector} +
-        ":not(:has(.number_picker_input[value='" +
-        $value +
-        "'][data-x='" +
-        $i +
-        "']:checked ~ .number_picker_input[value='" +
-        $value +
-        "'][data-x='" +
-        $i +
-        "']:checked))";
-      $winningSelector: #{$winningSelector} +
-        ":not(:has(.number_picker_input[value='" +
-        $value +
-        "'][data-y='" +
-        $i +
-        "']:checked ~ .number_picker_input[value='" +
-        $value +
-        "'][data-y='" +
-        $i +
-        "']:checked))";
-    }
+@for $i from 1 through $squares-count {
+  @for $value from 1 through $squares-count {
+    $winningSelector: #{$winningSelector} +
+      ":not(:has(.number_picker_input[value='" +
+      $value +
+      "'][data-square-group='" +
+      $i +
+      "']:checked ~ .number_picker_input[value='" +
+      $value +
+      "'][data-square-group='" +
+      $i +
+      "']:checked))";
+    $winningSelector: #{$winningSelector} +
+      ":not(:has(.number_picker_input[value='" +
+      $value +
+      "'][data-x='" +
+      $i +
+      "']:checked ~ .number_picker_input[value='" +
+      $value +
+      "'][data-x='" +
+      $i +
+      "']:checked))";
+    $winningSelector: #{$winningSelector} +
+      ":not(:has(.number_picker_input[value='" +
+      $value +
+      "'][data-y='" +
+      $i +
+      "']:checked ~ .number_picker_input[value='" +
+      $value +
+      "'][data-y='" +
+      $i +
+      "']:checked))";
   }
 }
 
