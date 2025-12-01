@@ -16,13 +16,13 @@ html(lang="en")
 
   .difficulty-picker-labels
     label(for="game-difficulty-easy") 
-      img(src="sudoku.png", alt="Easy")
+      img(src="../img/sudoku.png", alt="Easy")
       p(id="easy-difficulty-label") Easy Sudoku
     label(for="game-difficulty-medium")
-      img(src="sudoku.png", alt="Medium")
+      img(src="../img/sudoku.png", alt="Medium")
       p(id="medium-difficulty-label") Medium Sudoku
     label(for="game-difficulty-hard") 
-      img(src="sudoku.png", alt="Hard")
+      img(src="../img/sudoku.png", alt="Hard")
       p(id="hard-difficulty-label") Hard Sudoku
   .win99-taskbar
     .win99-start-button CSS Only Sudoku
@@ -73,8 +73,8 @@ html(lang="en")
             )
         label.square(for=`board-easy-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
           if isPreFilled
-            div(style="position: absolute; bottom: 4px; right: 4px; width: 30px; height: 30px")
-              img(src='./lock.png', alt='Locked', style="width: 100%; height: 100%;")
+            div(style="position: absolute; user-select: none; bottom: 4px; right: 4px; width: 30px; height: 30px")
+              img(src='../img/lock.png', alt='Locked', style="width: 100%; height: 100%;")
           else
             input.sidebar_toggle_input(type="radio", id=`board-easy-square-${square.index}`, name="select-square")
             label.sidebar_toggle_label(for=`board-easy-square-${square.index}`)
@@ -100,7 +100,7 @@ html(lang="en")
       -   squares.push({ index: i + 1, group: group });
       - }
       each square in squares
-        - var preFilledSquares = [[1, 9], [5, 4], [7, 6], [19, 7], [10, 8],[13, 3], [34, 8],[31, 4], [11, 2],[21, 3], [22, 1]];
+        - var preFilledSquares = [[1, 9], [5, 4], [7, 6], [19, 7], [10, 8],[13, 3], [29, 3], [34, 9],[31, 4], [11, 2],[21, 3], [22, 1]];
         - var preFilledEntry = preFilledSquares.find(entry => entry[0] === square.index);
         - var isPreFilled = preFilledEntry !== undefined;
         - var defaultValue = isPreFilled ? preFilledEntry[1] : 0;
@@ -117,10 +117,10 @@ html(lang="en")
                 data-x=(square.index-1)%6+1
                 data-y=Math.ceil(square.index/6)
             )
-        label.square(for=`board-medium-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
+        label.square(for=`board-medium-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%6+1 data-y=Math.ceil(square.index/6))
           if isPreFilled
-            div(style="position: absolute; bottom: 3px; right: 3px; width: 24px; height: 24px")
-              img(src='./lock.png', alt='Locked', style="width: 100%; height: 100%;")
+            div(style="position: absolute; user-select: none; bottom: 3px; right: 3px; width: 24px; height: 24px")
+              img(src='../img/lock.png', alt='Locked', style="width: 100%; height: 100%;")
           else
             input.sidebar_toggle_input(type="radio", id=`board-medium-square-${square.index}`, name="select-square")
             label.sidebar_toggle_label(for=`board-medium-square-${square.index}`)
@@ -165,8 +165,8 @@ html(lang="en")
             )
         label.square(for=`board-hard-square-${square.index}` data-square-index=square.index data-square-group=square.group data-x=(square.index-1)%9+1 data-y=Math.ceil(square.index/9))
           if isPreFilled
-            div(style="position: absolute; bottom: 2px; right: 2px; width: 17px; height: 17px")
-              img(src='./lock.png', alt='Locked', style="width: 100%; height: 100%;")
+            div(style="position: absolute; user-select: none; bottom: 2px; right: 2px; width: 17px; height: 17px")
+              img(src='../img/lock.png', alt='Locked', style="width: 100%; height: 100%;")
           else
             input.sidebar_toggle_input(type="radio", id=`board-hard-square-${square.index}`, name="select-square")
             label.sidebar_toggle_label(for=`board-hard-square-${square.index}`)
