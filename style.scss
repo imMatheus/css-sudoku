@@ -175,6 +175,7 @@ $taskbar-height: 32px;
   height: 500px;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%);
 }
 
@@ -281,7 +282,10 @@ $taskbar-height: 32px;
   label[for='game-difficulty-medium'],
 .game-difficulty-input[id='game-difficulty-hard']:checked
   ~ .difficulty-picker-labels
-  label[for='game-difficulty-hard'] {
+  label[for='game-difficulty-hard'],
+.game-difficulty-input[id='game-difficulty-info']:checked
+  ~ .difficulty-picker-labels
+  label[for='game-difficulty-info'] {
   img {
     // this is like a blue effect on icon
     filter: brightness(0.4) contrast(0.8) sepia(100%) hue-rotate(185deg)
@@ -296,7 +300,8 @@ $taskbar-height: 32px;
 
 .game-easy,
 .game-medium,
-.game-hard {
+.game-hard,
+.game-info {
   display: none;
 }
 
@@ -306,6 +311,10 @@ $taskbar-height: 32px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+}
+
+.game-difficulty-input[id='game-difficulty-info']:checked ~ .game-info {
+  display: block;
 }
 
 .game-difficulty-input[id='game-difficulty-easy']:checked ~ .difficulty-picker,
@@ -685,5 +694,54 @@ $winningSelector: '';
 
   .number_picker_sidebar {
     display: none;
+  }
+}
+
+.info-content {
+  padding: 16px;
+  overflow-y: auto;
+  height: calc(100% - 20px);
+
+  h2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #000080;
+  }
+
+  h3 {
+    font-size: 12px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  ul {
+    margin-left: 16px;
+    margin-bottom: 8px;
+
+    li {
+      font-size: 11px;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+  }
+
+  a {
+    color: #000080;
+    text-decoration: underline;
+
+    &:visited {
+      color: #551a8b;
+    }
+  }
+
+  strong {
+    font-weight: bold;
   }
 }

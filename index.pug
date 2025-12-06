@@ -9,6 +9,7 @@ html(lang="en")
   input.game-difficulty-input(type="radio", id="game-difficulty-easy", name="game-difficulty")
   input.game-difficulty-input(type="radio", id="game-difficulty-medium", name="game-difficulty")
   input.game-difficulty-input(type="radio", id="game-difficulty-hard", name="game-difficulty")
+  input.game-difficulty-input(type="radio", id="game-difficulty-info", name="game-difficulty")
   input.goBackButton(type="radio", id="goBackButton", name="game-difficulty")
   .loading-screen
     .loading-screen-inner
@@ -27,6 +28,9 @@ html(lang="en")
     label(for="game-difficulty-hard") 
       img(src="./img/sudoku.png", alt="Hard")
       p(id="hard-difficulty-label") Hard Sudoku
+    label(for="game-difficulty-info")
+      img(src="./img/help.png", alt="Info")
+      p(id="info-difficulty-label") About
   .win99-taskbar
     .win99-start-button CSS Only Sudoku
     .win99-start-button-container
@@ -206,3 +210,30 @@ html(lang="en")
             .number_picker_sidebar
               each num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
                 label.number_picker_label(for=`board-hard-square-${square.index}-number-${num}`)=num===0 ? "X" : num
+  
+  .game-info.win99-window
+    .win99-title-bar
+      div
+        p About CSS Only Sudoku
+      label.win99-button(for="goBackButton") ×
+    .info-content
+      h2 CSS Only Sudoku
+      p This is a fully functional Sudoku game built entirely with HTML and CSS. NO JavaScript was used.
+      h3 How It Works
+      p The game uses clever CSS selectors and the :checked pseudo-class on radio inputs to track game state. Pure CSS logic validates moves and detects winning conditions.
+      h3 How to Play
+      ul
+        li Click on any empty square to open the number picker
+        li Select a number from 1-9 (or X to clear)
+        li Invalid moves turn squares dark red
+        li Complete the grid to win and see confetti!
+      h3 Rules
+      ul
+        li Each row must contain numbers 1-9
+        li Each column must contain numbers 1-9
+        li Each 3×3 box must contain numbers 1-9
+      p
+        strong Created by 
+        a(href="https://x.com/whosmatu", target="_blank") @whosmatu
+      p
+        a(href="https://github.com/whosmatu/css-only-sudoku", target="_blank") View source on GitHub

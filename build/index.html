@@ -10,6 +10,7 @@
   <input class="game-difficulty-input" type="radio" id="game-difficulty-easy" name="game-difficulty">
   <input class="game-difficulty-input" type="radio" id="game-difficulty-medium" name="game-difficulty">
   <input class="game-difficulty-input" type="radio" id="game-difficulty-hard" name="game-difficulty">
+  <input class="game-difficulty-input" type="radio" id="game-difficulty-info" name="game-difficulty">
   <input class="goBackButton" type="radio" id="goBackButton" name="game-difficulty">
   <div class="loading-screen">
     <div class="loading-screen-inner">
@@ -39,6 +40,9 @@
     </label>
     <label for="game-difficulty-hard"> <img src="./img/sudoku.png" alt="Hard">
       <p id="hard-difficulty-label">Hard Sudoku</p>
+    </label>
+    <label for="game-difficulty-info"><img src="./img/help.png" alt="Info">
+      <p id="info-difficulty-label">About</p>
     </label>
   </div>
   <div class="win99-taskbar">
@@ -3679,6 +3683,35 @@
           <label class="number_picker_label" for="board-hard-square-81-number-9">9</label>
         </div>
       </label>
+    </div>
+  </div>
+  <div class="game-info win99-window">
+    <div class="win99-title-bar">
+      <div>
+        <p>About CSS Only Sudoku</p>
+      </div>
+      <label class="win99-button" for="goBackButton">×</label>
+    </div>
+    <div class="info-content">
+      <h2>CSS Only Sudoku</h2>
+      <p>This is a fully functional Sudoku game built entirely with HTML and CSS. NO JavaScript was used.</p>
+      <h3>How It Works</h3>
+      <p>The game uses clever CSS selectors and the :checked pseudo-class on radio inputs to track game state. Pure CSS logic validates moves and detects winning conditions.</p>
+      <h3>How to Play</h3>
+      <ul>
+        <li>Click on any empty square to open the number picker</li>
+        <li>Select a number from 1-9 (or X to clear)</li>
+        <li>Invalid moves turn squares dark red</li>
+        <li>Complete the grid to win and see confetti!</li>
+      </ul>
+      <h3>Rules</h3>
+      <ul>
+        <li>Each row must contain numbers 1-9</li>
+        <li>Each column must contain numbers 1-9</li>
+        <li>Each 3×3 box must contain numbers 1-9</li>
+      </ul>
+      <p><strong>Created by </strong><a href="https://x.com/whosmatu" target="_blank">@whosmatu</a></p>
+      <p><a href="https://github.com/whosmatu/css-only-sudoku" target="_blank">View source on GitHub</a></p>
     </div>
   </div>
 </html>
