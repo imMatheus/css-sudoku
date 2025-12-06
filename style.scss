@@ -682,4 +682,8 @@ $winningSelector: '';
     z-index: 1000;
     --play: running;
   }
+
+  .number_picker_sidebar {
+    display: none;
+  }
 }
