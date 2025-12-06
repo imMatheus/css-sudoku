@@ -5,6 +5,29 @@
   src: url('./pixel-font.woff2') format('woff2');
 }
 
+// CSS Variables for responsive design
+:root {
+  --window-size: min(500px, 95vw, calc(100vh - 60px));
+  --picker-button-size: 70px;
+  --square-font-size-easy: 3.5rem;
+  --square-font-size-hard: 1.8rem;
+  --confetti-size: 72px;
+
+  @media (max-width: 768px) {
+    --window-size: min(95vw, 95vh);
+    --picker-button-size: clamp(48px, 18vw, 70px);
+    --square-font-size-easy: clamp(2rem, 8vw, 3.5rem);
+    --square-font-size-hard: clamp(1rem, 4.5vw, 1.8rem);
+    --confetti-size: clamp(40px, 15vw, 72px);
+  }
+
+  @media (max-width: 480px) {
+    --picker-button-size: clamp(44px, 16vw, 60px);
+    --square-font-size-easy: clamp(1.5rem, 7vw, 2.5rem);
+    --square-font-size-hard: clamp(0.9rem, 4vw, 1.5rem);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -70,7 +93,7 @@ body {
 
 .loading-screen-loader {
   height: 45px;
-  width: 350px;
+  width: min(350px, 80vw);
   display: flex;
   gap: 1px;
   background: #c0c0c0;
@@ -158,6 +181,17 @@ $taskbar-height: 32px;
     border-right-color: #dfdfdf;
     border-bottom-color: #dfdfdf;
   }
+
+  @media (max-width: 768px) {
+    font-size: 9px;
+    padding: 2px 6px;
+    gap: 2px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
+    padding: 2px 4px;
+  }
 }
 
 /* Windows 99 Window Styling */
@@ -171,12 +205,15 @@ $taskbar-height: 32px;
   box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #000080,
     1px 1px 0 #dfdfdf, 2px 2px 0 #808080;
   position: fixed;
-  width: 500px;
-  height: 500px;
+
+  width: var(--window-size);
+  height: var(--window-size);
   top: 50%;
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+  max-height: calc(100vh - $taskbar-height - 20px);
+  max-width: calc(100vw - 20px);
 }
 
 .win99-title-bar {
@@ -191,6 +228,17 @@ $taskbar-height: 32px;
   border-bottom: 2px solid #000080;
   height: 20px;
   user-select: none;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+    height: 18px;
+    padding: 2px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+    height: 16px;
+  }
 }
 
 .win99-button {
@@ -216,6 +264,18 @@ $taskbar-height: 32px;
   justify-content: center;
   font-size: 11px;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
 }
 
 .goBackButton {
@@ -243,6 +303,7 @@ $taskbar-height: 32px;
   display: flex;
   flex-direction: column;
   padding: 24px;
+  gap: 4px;
 
   label {
     position: relative;
@@ -270,6 +331,43 @@ $taskbar-height: 32px;
       width: 100%;
       border: solid 1px transparent;
       text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    gap: 2px;
+
+    label {
+      width: 70px;
+      gap: 4px;
+
+      img {
+        width: 64px;
+        height: 64px;
+      }
+
+      p {
+        font-size: 9px;
+        margin-top: -8px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px;
+
+    label {
+      width: 60px;
+
+      img {
+        width: 56px;
+        height: 56px;
+      }
+
+      p {
+        font-size: 8px;
+      }
     }
   }
 }
@@ -339,7 +437,7 @@ $taskbar-height: 32px;
   width: 100vw;
   height: calc(100vh - $taskbar-height);
   transform: translate(-50%, -50%);
-  z-index: -1;
+  // z-index: -1;
 }
 
 $square-size: 70px;
@@ -352,6 +450,14 @@ $squares-count: 9;
   height: 100%;
   z-index: 1;
   position: relative;
+
+  @media (max-width: 768px) {
+    border: 3px solid #000;
+  }
+
+  @media (max-width: 480px) {
+    border: 2px solid #000;
+  }
 }
 
 .game-easy .board {
@@ -359,7 +465,7 @@ $squares-count: 9;
   grid-template-rows: repeat(3, 1fr);
 
   .square {
-    --square-font-size: 3.5rem;
+    --square-font-size: var(--square-font-size-easy);
   }
 }
 
@@ -369,12 +475,13 @@ $squares-count: 9;
   grid-template-rows: repeat(9, 1fr);
 
   .square {
-    --square-font-size: 1.8rem;
+    --square-font-size: var(--square-font-size-hard);
+    --border-size: 4px;
     // Make inner crossing borders thicker
     // second vertical row
     &:nth-child(9n-5),
     &:nth-child(9n-2) {
-      border-right: 4px solid #000;
+      border-right: var(--border-size) solid #000;
     }
 
     // horizontal rows
@@ -396,7 +503,19 @@ $squares-count: 9;
     &:nth-of-type(52),
     &:nth-of-type(53),
     &:nth-of-type(54) {
-      border-bottom: 4px solid #000;
+      border-bottom: var(--border-size) solid #000;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .square {
+      --border-size: 3px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .square {
+      --border-size: 2px;
     }
   }
 }
@@ -406,6 +525,9 @@ $squares-count: 9;
   position: relative;
   transition: background-color 150ms;
   font-size: 10px;
+  min-width: 0; // Allow squares to shrink below their content size
+  min-height: 0;
+
   &[data-y='1'],
   &[data-y='2'] {
     .number_picker_sidebar {
@@ -416,17 +538,51 @@ $squares-count: 9;
   }
 }
 
+.lock-icon {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.lock-icon-easy {
+  bottom: clamp(2px, 1%, 4px);
+  right: clamp(2px, 1%, 4px);
+  width: clamp(20px, 6%, 30px);
+  height: clamp(20px, 6%, 30px);
+}
+
+.lock-icon-hard {
+  bottom: clamp(1px, 0.5%, 2px);
+  right: clamp(1px, 0.5%, 2px);
+  width: clamp(10px, 3.5%, 17px);
+  height: clamp(10px, 3.5%, 17px);
+}
+
 .sidebar_toggle_label {
   position: absolute;
   inset: 0;
   cursor: pointer;
 }
+
 .sidebar_toggle_input:checked + .sidebar_toggle_label {
   border: solid 3px;
   border-top-color: #808080;
   border-left-color: #808080;
   border-right-color: #dfdfdf;
   border-bottom-color: #dfdfdf;
+
+  @media (max-width: 768px) {
+    border-width: 2px;
+  }
 }
 
 .sidebar_toggle_input {
@@ -456,9 +612,16 @@ $squares-count: 9;
   transform: translate(-50%, -100%);
   display: none;
   animation: sidebar-disappear 50ms;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    top: 50%;
+    transform: translate(-50%, -100%);
+  }
 }
 
 .number_picker_label {
+  width: var(--picker-button-size);
+  height: var(--picker-button-size);
   width: 70px;
   height: 70px;
   background: #c0c0c0;
@@ -469,6 +632,7 @@ $squares-count: 9;
   border-bottom-color: #808080;
   color: #000000;
   font-size: 2.5rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -609,52 +773,50 @@ $winningSelector: '';
   user-select: none;
   z-index: -100000;
 
-  $confetti-size: 72px;
-
   .confetti {
-    width: $confetti-size;
-    height: $confetti-size;
+    width: var(--confetti-size);
+    height: var(--confetti-size);
     position: absolute;
     top: 0px;
     animation: confetti-animation 6s steps(18) infinite;
     animation-play-state: var(--play, paused);
 
     &:nth-child(1) {
-      left: 0px;
+      left: calc(var(--confetti-size) * 0);
       animation-delay: 150ms;
     }
     &:nth-child(2) {
-      left: $confetti-size;
+      left: calc(var(--confetti-size) * 1);
       rotate: 40deg;
       animation-delay: 70ms;
     }
     &:nth-child(3) {
-      left: $confetti-size * 2;
+      left: calc(var(--confetti-size) * 2);
       rotate: 25deg;
       animation-delay: 50ms;
     }
     &:nth-child(4) {
-      left: $confetti-size * 3;
+      left: calc(var(--confetti-size) * 3);
       rotate: 0deg;
       animation-delay: 110ms;
     }
     &:nth-child(5) {
-      left: $confetti-size * 4;
+      left: calc(var(--confetti-size) * 4);
       rotate: -20deg;
       animation-delay: 20ms;
     }
     &:nth-child(6) {
-      left: $confetti-size * 5;
+      left: calc(var(--confetti-size) * 5);
       rotate: -20deg;
       animation-delay: 130ms;
     }
     &:nth-child(7) {
-      left: $confetti-size * 6;
+      left: calc(var(--confetti-size) * 6);
       rotate: -20deg;
       animation-delay: 70ms;
     }
     &:nth-child(8) {
-      left: $confetti-size * 7;
+      left: calc(var(--confetti-size) * 7);
       rotate: -20deg;
       animation-delay: 30ms;
     }
@@ -662,9 +824,9 @@ $winningSelector: '';
 
   p {
     color: #fff;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     position: relative;
-    font-size: bold;
+    font-weight: bold;
   }
 }
 @keyframes confetti-animation {
@@ -743,5 +905,45 @@ $winningSelector: '';
 
   strong {
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px;
+
+    h2 {
+      font-size: 13px;
+    }
+
+    h3 {
+      font-size: 11px;
+      margin-top: 10px;
+    }
+
+    p,
+    li {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+
+    h2 {
+      font-size: 12px;
+    }
+
+    h3 {
+      font-size: 10px;
+      margin-top: 8px;
+    }
+
+    p,
+    li {
+      font-size: 9px;
+    }
+
+    ul {
+      margin-left: 12px;
+    }
   }
 }
