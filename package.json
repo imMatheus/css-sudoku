@@ -1,9 +1,0 @@
-{
-  "name": "css-sudoku",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "pug": "pug -w . -o ./build/html.html -P",
-    "sass": "sass style.scss:./build/style.css --watch"
-  }
-}
